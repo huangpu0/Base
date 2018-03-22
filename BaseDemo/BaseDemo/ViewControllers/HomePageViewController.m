@@ -19,6 +19,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavigationWithTitle:@"首页"];
+    
+    [HttpServer requestGetMethodWithURL:@"https://api.yudutgx.com/api/account/get/invite/code/info" withParameters:nil withResponseCache:^(id responseCache) {
+        NSLog(@"mo=222=%@",responseCache);
+    } withSuccessBlock:^(id response) {
+        NSLog(@"mo=111=%@",response);
+    } withFailureBlock:^(NSError *error) {
+        NSLog(@"mo=222=%@",error);
+    }];
+    
 }
 -(void)setNavigationWithTitle:(NSString *)title{
     [super setNavigationWithTitle:title];
