@@ -113,5 +113,32 @@ static AFHTTPSessionManager *manager;
     }];
 }
 
+/**
+ post请求带有缓存
+ 
+ @param url 拼接url
+ @param parameters 参数
+ @param successBlock 成功的回调 block
+ @param failureBlock 失败的回调 block
+ */
++(void)requestPostMethodWithURL:(NSString *)url withParameters:(id )parameters withResponseCache:(HttpRequestCache)cacheBlock withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
+    [[HttpServer sharedClient]requestPostMethodWithURL:url withParameters:parameters withResponseCache:cacheBlock withSuccessBlock:successBlock withFailureBlock:failureBlock];
+}
+-(void)requestPostMethodWithURL:(NSString *)url withParameters:(id )parameters withResponseCache:(HttpRequestCache)cacheBlock withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
+    
+    cacheBlock !=nil ? cacheBlock([NetworkCache httpCacheForURL:url parameters:parameters]) : nil;
+    [manager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //对数据进行异步缓存
+        cacheBlock !=nil ? [NetworkCache setHttpCache:responseObject URL:url parameters:parameters] : nil;
+        
+        NSLog(@"-数据-%@",responseObject);
+        successBlock(responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"-失败-%@",error);
+        failureBlock(error);
+    }];
+
+}
 @end
 
