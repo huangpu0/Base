@@ -8,7 +8,7 @@
 
 #import "HttpServer.h"
 #import "NetworkCache.h"
-
+#import "FilesManager.h"
 static AFHTTPSessionManager *manager;
 
 @implementation HttpServer
@@ -32,7 +32,7 @@ static AFHTTPSessionManager *manager;
 /**
  get请求
  
- @param url 拼接url
+ @param url 请求地址
  @param parameters 参数
  @param successBlock 成功的回调 block
  @param failureBlock 失败的回调 block
@@ -47,11 +47,11 @@ static AFHTTPSessionManager *manager;
     //    [parameter setValue:[dic dictionaryToJson] forKey:@"QueryData"];
     //    URL: http://caiyiquan.082818.com/api/Client/ApiHandle.ashx?FunctionName=GetTalkGroupRecomList&QueryData=%7B%22UserID%22%3A%224827%22%7D&Type=GetResult
     [manager GET:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"-数据-%@",responseObject);
+        NSLog(@"请求数据--%@",responseObject);
         successBlock(responseObject);
         //successBlock(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"-失败-%@",error);
+        NSLog(@"请求失败--%@",error);
         failureBlock(error);
     }];
 }
@@ -59,7 +59,7 @@ static AFHTTPSessionManager *manager;
 /**
  get请求带有缓存
  
- @param url 拼接url
+ @param url 请求地址
  @param parameters 参数
  @param successBlock 成功的回调 block
  @param failureBlock 失败的回调 block
@@ -83,18 +83,19 @@ static AFHTTPSessionManager *manager;
         //对数据进行异步缓存
         cacheBlock !=nil ? [NetworkCache setHttpCache:responseObject URL:url parameters:parameters] : nil;
         
-        
+        NSLog(@"请求数据--%@",responseObject);
         successBlock(responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        NSLog(@"请求失败--%@",error);
+        failureBlock(error);
     }];
     
 }
 /**
  post请求
  
- @param url 拼接url
+ @param url 请求地址
  @param parameters 参数
  @param successBlock 成功的回调 block
  @param failureBlock 失败的回调 block
@@ -105,10 +106,10 @@ static AFHTTPSessionManager *manager;
 - (void)requestPostMethodWithURL:(NSString *)url withParameters:(id )parameters withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
     [manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"-数据-%@",responseObject);
+        NSLog(@"请求数据--%@",responseObject);
         successBlock(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"-失败-%@",error);
+        NSLog(@"请求失败--%@",error);
         failureBlock(error);
     }];
 }
@@ -116,7 +117,7 @@ static AFHTTPSessionManager *manager;
 /**
  post请求带有缓存
  
- @param url 拼接url
+ @param url 请求地址
  @param parameters 参数
  @param successBlock 成功的回调 block
  @param failureBlock 失败的回调 block
@@ -131,14 +132,119 @@ static AFHTTPSessionManager *manager;
         //对数据进行异步缓存
         cacheBlock !=nil ? [NetworkCache setHttpCache:responseObject URL:url parameters:parameters] : nil;
         
-        NSLog(@"-数据-%@",responseObject);
+        NSLog(@"请求数据--%@",responseObject);
         successBlock(responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"-失败-%@",error);
+        NSLog(@"请求失败--%@",error);
         failureBlock(error);
     }];
+}
 
+/**
+ 上传单张照片
+ 
+ @param url 请求地址
+ @param parameters 参数
+ @param image 图片
+ @param successBlock 成功的回调 block
+ @param failureBlock 失败的回调 block
+ */
++ (void)uploadPictureWithURL:(NSString *)url withParameters:(id)parameters withImage:(UIImage *)image withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
+    [[HttpServer sharedClient]uploadPictureWithURL:url withParameters:parameters withImage:image withSuccessBlock:successBlock withFailureBlock:failureBlock];
+}
+- (void)uploadPictureWithURL:(NSString *)url withParameters:(id)parameters withImage:(UIImage *)image withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
+    
+    [manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
+        NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
+        formatter.dateFormat=@"yyyyMMddHHmmss";
+        NSString *str=[formatter stringFromDate:[NSDate date]];
+        NSString *fileName=[NSString stringWithFormat:@"%@.png",str];
+        [formData appendPartWithFileData:imageData name:@"PhotoData" fileName:fileName mimeType:@"image/jpeg/png/jpg"];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"请求数据--%@",responseObject);
+        successBlock(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"请求失败--%@",error);
+        failureBlock(error);
+    }];
+}
+
+/**
+ 上传多张照片
+ 
+ @param url 请求地址
+ @param parameters 参数
+ @param imagesArray 图片数组
+ @param successBlock 成功的回调 block
+ @param failureBlock 失败的回调 block
+ */
++ (void)uploadPicturesWithURL:(NSString *)url  withParameters:(id )parameters  withImagesArray:(NSArray <UIImage *>*)imagesArray  withSuccessBlock:(HttpRequestSuccess)successBlock  withFailureBlock:(HttpRequestFailed)failureBlock;{
+    [[HttpServer sharedClient]uploadPicturesWithURL:url withParameters:parameters withImagesArray:imagesArray withSuccessBlock:successBlock withFailureBlock:failureBlock];
+}
+- (void)uploadPicturesWithURL:(NSString *)url  withParameters:(id )parameters  withImagesArray:(NSArray <UIImage *>*)imagesArray  withSuccessBlock:(HttpRequestSuccess)successBlock  withFailureBlock:(HttpRequestFailed)failureBlock;{
+    
+    for (int i = 0; i < imagesArray.count; i ++) {
+        [manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+            NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
+            formatter.dateFormat=@"yyyyMMddHHmmss";
+            NSString *str=[formatter stringFromDate:[NSDate date]];
+            NSString *fileName=[NSString stringWithFormat:@"%@.png",str];
+            UIImage *image = imagesArray[i];
+            NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
+            [formData appendPartWithFileData:imageData name:@"PhotoData" fileName:fileName mimeType:@"image/jpeg/png/jpg"];
+        } progress:^(NSProgress * _Nonnull uploadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSLog(@"请求数据--%@",responseObject);
+            successBlock(responseObject);
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"请求失败--%@",error);
+            failureBlock(error);
+        }];
+    }
+}
+
+/**
+ 文件下载相关
+ 
+ @param url 请求地址
+ @param parameters 参数
+ @param fileName 保存本地文件名字
+ @param successBlock 成功的回调 block
+ @param failureBlock 失败的回调 block
+ */
++ (void)downloadFileWithURL:(NSString *)url  withParameters:(id )parameters  downloadLocalFileName:(NSString *)fileName withProgressBlock:(HttpRequestProgress)progressBlock withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
+    [[HttpServer sharedClient]downloadFileWithURL:url withParameters:parameters  downloadLocalFileName:fileName withProgressBlock:progressBlock withSuccessBlock:successBlock withFailureBlock:failureBlock];
+}
+- (void)downloadFileWithURL:(NSString *)url withParameters:(id )parameters downloadLocalFileName:(NSString *)fileName withProgressBlock:(HttpRequestProgress)progressBlock withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
+    
+    NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:requestURL progress:^(NSProgress * _Nonnull downloadProgress) {
+        //下载进度
+        dispatch_async(dispatch_get_main_queue(), ^{
+            progressBlock ? progressBlock(downloadProgress) : nil;
+        });
+        NSLog(@"下载进度:==%.2f",100.0*downloadProgress.completedUnitCount/downloadProgress.totalUnitCount);
+    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        
+        NSString *localFilePath = [fileName ? fileName : @"filePath" stringByAppendingPathComponent:response.suggestedFilename];
+        
+        NSString *filePath= [[FilesManager defaultManager]fileCreateWithName:localFilePath];
+       
+        //返回文件位置的URL路径
+        return [NSURL fileURLWithPath:filePath];
+        
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        if(failureBlock && error) {failureBlock(error) ; return ;};
+        successBlock ? successBlock(filePath.absoluteString /** NSURL->NSString*/) : nil;
+    }];
+    //开始下载
+    [downloadTask resume];
 }
 @end
 

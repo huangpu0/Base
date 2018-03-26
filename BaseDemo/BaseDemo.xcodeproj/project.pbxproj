@@ -29,6 +29,7 @@
 		F67109731FD660BF00D2C2C2 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F671096F1FD660BF00D2C2C2 /* HomePageViewController.m */; };
 		F67109741FD660BF00D2C2C2 /* HomePageRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109701FD660BF00D2C2C2 /* HomePageRootViewController.m */; };
 		F67109781FD6641300D2C2C2 /* NetWorkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109771FD6641300D2C2C2 /* NetWorkStatus.m */; };
+		F69F00CF2068E33700E23E34 /* FilesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F00CE2068E33700E23E34 /* FilesManager.m */; };
 		F6C9097A1FD67B2C00C8F04C /* MJHeadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C909541FD67B2C00C8F04C /* MJHeadTool.m */; };
 		F6C9097B1FD67B2C00C8F04C /* MJAutoFooterTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C909551FD67B2C00C8F04C /* MJAutoFooterTool.m */; };
 		F6C9097C1FD67B2C00C8F04C /* NSString+RegExp.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C9095A1FD67B2C00C8F04C /* NSString+RegExp.m */; };
@@ -107,6 +108,8 @@
 		F67109711FD660BF00D2C2C2 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
 		F67109761FD6641300D2C2C2 /* NetWorkStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkStatus.h; sourceTree = "<group>"; };
 		F67109771FD6641300D2C2C2 /* NetWorkStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkStatus.m; sourceTree = "<group>"; };
+		F69F00CD2068E33700E23E34 /* FilesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilesManager.h; sourceTree = "<group>"; };
+		F69F00CE2068E33700E23E34 /* FilesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilesManager.m; sourceTree = "<group>"; };
 		F6C909501FD6763100C8F04C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
 		F6C909511FD678E900C8F04C /* ApiParameterList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiParameterList.h; sourceTree = "<group>"; };
 		F6C909541FD67B2C00C8F04C /* MJHeadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJHeadTool.m; sourceTree = "<group>"; };
@@ -308,9 +311,19 @@
 			path = NetWork;
 			sourceTree = "<group>";
 		};
+		F69F00CC2068E31B00E23E34 /* FilesManagerTool */ = {
+			isa = PBXGroup;
+			children = (
+				F69F00CD2068E33700E23E34 /* FilesManager.h */,
+				F69F00CE2068E33700E23E34 /* FilesManager.m */,
+			);
+			path = FilesManagerTool;
+			sourceTree = "<group>";
+		};
 		F6C909521FD67B2C00C8F04C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				F69F00CC2068E31B00E23E34 /* FilesManagerTool */,
 				F63428892063B8AE00E2B9F5 /* YYCache */,
 				F61D15121FD7C86100025F9A /* ProgressHUD */,
 				F6C9099A1FD6A23700C8F04C /* DateFormat */,
@@ -627,6 +640,7 @@
 				F6C9098D1FD67C1C00C8F04C /* HttpServer.m in Sources */,
 				F6C909821FD67B2C00C8F04C /* LPTitleModel.m in Sources */,
 				F6C909951FD6A02600C8F04C /* Convert.m in Sources */,
+				F69F00CF2068E33700E23E34 /* FilesManager.m in Sources */,
 				F6C909911FD6965300C8F04C /* HttpBaseModel.m in Sources */,
 				F6C909A51FD6A79800C8F04C /* NSString+Extension.m in Sources */,
 				F6C909801FD67B2C00C8F04C /* BaseModel.m in Sources */,

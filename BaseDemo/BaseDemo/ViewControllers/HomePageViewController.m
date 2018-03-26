@@ -21,13 +21,20 @@
     [self setNavigationWithTitle:@"首页"];
     
     [HttpServer requestGetMethodWithURL:@"https://api.yudutgx.com/api/account/get/invite/code/info" withParameters:nil withResponseCache:^(id responseCache) {
-        NSLog(@"mo=222=%@",responseCache);
+        NSLog(@"缓存数据==%@",responseCache);
     } withSuccessBlock:^(id response) {
-        NSLog(@"mo=111=%@",response);
+        NSLog(@"请求数据==%@",response);
     } withFailureBlock:^(NSError *error) {
-        NSLog(@"mo=222=%@",error);
+        NSLog(@"请求失败==%@",error);
     }];
     
+    [HttpServer downloadFileWithURL:@"http://wvideo.spriteapp.cn/video/2016/0328/56f8ec01d9bfe_wpd.mp4" withParameters:nil downloadLocalFileName:@"qq" withProgressBlock:^(NSProgress *progress) {
+        
+    } withSuccessBlock:^(id response) {
+       NSLog(@"===4434==%@",response);
+    } withFailureBlock:^(NSError *error) {
+        
+    }];
 }
 -(void)setNavigationWithTitle:(NSString *)title{
     [super setNavigationWithTitle:title];
