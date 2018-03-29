@@ -109,13 +109,13 @@ typedef void (^HttpRequestCache)  (id responseCache);
 
  @param url 请求地址
  @param parameters 参数
- @param fileName 保存本地文件名字
+ @param dirName 保存本地文件名字
  @param successBlock 成功的回调 block
  @param failureBlock 失败的回调 block
  */
 + (void)downloadFileWithURL:(NSString *)url
              withParameters:(id )parameters
-      downloadLocalFileName:(NSString *)fileName
+      downloadCreateDirectoryName:(NSString *)dirName
           withProgressBlock:(HttpRequestProgress)progressBlock
            withSuccessBlock:(HttpRequestSuccess)successBlock
            withFailureBlock:(HttpRequestFailed)failureBlock;

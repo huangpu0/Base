@@ -213,14 +213,14 @@ static AFHTTPSessionManager *manager;
  
  @param url 请求地址
  @param parameters 参数
- @param fileName 保存本地文件名字
+ @param dirName 保存本地文件名字
  @param successBlock 成功的回调 block
  @param failureBlock 失败的回调 block
  */
-+ (void)downloadFileWithURL:(NSString *)url  withParameters:(id )parameters  downloadLocalFileName:(NSString *)fileName withProgressBlock:(HttpRequestProgress)progressBlock withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
-    [[HttpServer sharedClient]downloadFileWithURL:url withParameters:parameters  downloadLocalFileName:fileName withProgressBlock:progressBlock withSuccessBlock:successBlock withFailureBlock:failureBlock];
++ (void)downloadFileWithURL:(NSString *)url  withParameters:(id )parameters  downloadCreateDirectoryName:(NSString *)dirName withProgressBlock:(HttpRequestProgress)progressBlock withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
+    [[HttpServer sharedClient]downloadFileWithURL:url withParameters:parameters  downloadCreateDirectoryName:dirName withProgressBlock:progressBlock withSuccessBlock:successBlock withFailureBlock:failureBlock];
 }
-- (void)downloadFileWithURL:(NSString *)url withParameters:(id )parameters downloadLocalFileName:(NSString *)fileName withProgressBlock:(HttpRequestProgress)progressBlock withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
+- (void)downloadFileWithURL:(NSString *)url withParameters:(id )parameters downloadCreateDirectoryName:(NSString *)dirName withProgressBlock:(HttpRequestProgress)progressBlock withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
     
     NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
@@ -232,7 +232,7 @@ static AFHTTPSessionManager *manager;
         NSLog(@"下载进度:==%.2f",100.0*downloadProgress.completedUnitCount/downloadProgress.totalUnitCount);
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
         //返回文件位置的URL路径
-        return [NSURL fileURLWithPath:[FilesManager createDirectory:@"视频" withFilePath:response.suggestedFilename]];
+        return [NSURL fileURLWithPath:[FilesManager createDirectory:dirName withFilePath:response.suggestedFilename]];
         
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         if(failureBlock && error) {failureBlock(error) ; return ;};

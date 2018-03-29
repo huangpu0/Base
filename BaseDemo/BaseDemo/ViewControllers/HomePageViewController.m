@@ -20,6 +20,13 @@
     [super viewDidLoad];
     [self setNavigationWithTitle:@"首页"];
     
+    [HttpServer downloadFileWithURL:@"http://bos.nj.bpc.baidu.com/tieba-smallvideo/11772_3c435014fb2dd9a5fd56a57cc369f6a0.mp4" withParameters:nil downloadCreateDirectoryName:nil withProgressBlock:^(NSProgress *progress) {
+        
+    } withSuccessBlock:^(id response) {
+        NSLog(@"文件地址==%@",response);
+    } withFailureBlock:^(NSError *error) {
+        
+    }];
 }
 -(void)setNavigationWithTitle:(NSString *)title{
     [super setNavigationWithTitle:title];
