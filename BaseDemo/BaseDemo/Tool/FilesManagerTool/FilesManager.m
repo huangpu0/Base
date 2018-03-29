@@ -8,182 +8,25 @@
 
 #import "FilesManager.h"
 
-static FilesManager * manager = nil;
-
 @implementation FilesManager
 
-+ (instancetype)defaultManager
-{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        manager = [[FilesManager alloc] init];
-    });
-    NSFileManager* filemanager = [NSFileManager defaultManager];
-    
-    NSString* path = [manager getFileBasePath];
-    
-    NSURL* urlPath = [NSURL fileURLWithPath:path];
-    BOOL falg;
-    falg = [filemanager createDirectoryAtURL:urlPath withIntermediateDirectories:YES attributes:nil error:nil];
-    
-    NSLog(@"falg = %d", falg);
-    
-    return manager;
-}
-//  创建文件夹
-- (NSString *)fileCreateWithName:(NSString *)filenName
-{
-    NSString * basePath = [self getFileBasePath];
-    NSString * filePath = [basePath stringByAppendingPathComponent:filenName];
-    NSFileManager * fileMangaer = [NSFileManager defaultManager];
-    [fileMangaer createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:nil];
+/**
+ 创建下载文件夹目录及文件名字
+ 
+ @param dirName 文件目录
+ @param fileName 文件名字
+ @return 文件地址 filePath
+ */
++ (NSString *)createDirectory:(NSString *)dirName withFilePath:(NSString *)fileName{
+    //拼接缓存目录
+    NSString *downloadDir = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:dirName ? dirName : @"Download"];
+    //打开文件管理器
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    //创建自定义目录或Download目录
+    [fileManager createDirectoryAtPath:downloadDir withIntermediateDirectories:YES attributes:nil error:nil];
+    //拼接文件路径
+    NSString *filePath = [downloadDir stringByAppendingPathComponent:fileName];
+
     return filePath;
 }
-//  判断文件是否存在, 如果存在 返回
-- (BOOL)fileExistsWithName:(NSString *)fileName file:(void (^)(NSData * data,BOOL isExist))block_file
-{
-    NSFileManager* filemanager = [NSFileManager defaultManager];
-    NSString * filePath = [NSString stringWithFormat:@"%@/%@.mp4",[self fileCreateWithName:@"video"],fileName];
-    BOOL flag;
-    flag = [filemanager fileExistsAtPath:filePath isDirectory:nil];
-    if (flag) {
-        NSData * fileData = [NSData dataWithContentsOfFile:filePath];
-        if (block_file) {
-            block_file(fileData,YES);
-            return YES;
-        }
-        else{
-            return YES;
-        }
-    }
-    else{
-        block_file(nil,NO);
-        return NO;
-    }
-}
-//   清除缓存
-- (BOOL)clearCache
-{
-    NSFileManager* filemanager = [NSFileManager defaultManager];
-    NSString* path = [self getFileBasePath];
-    return [filemanager removeItemAtPath:path error:nil];
-}
-
-- (void)removeFileWithUrl:(NSURL*)url block:(void (^)(BOOL success))callblock
-{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSFileManager *fileManager = [[NSFileManager alloc] init];
-        if ([fileManager fileExistsAtPath:url.path]) {
-            NSError *error;
-            [fileManager removeItemAtPath:url.path error:&error];
-            NSLog(@"删除成功---->%@",url);
-            if (callblock) {
-                if (error) {
-                    callblock(NO);
-                }
-                else{
-                    callblock(YES);
-                }
-            }
-        }
-    });
-}
-
-- (void)conversionFormatMp4WithUrl:(NSURL*)videoUrl videoUrl:(NSString *)url videoblock:(void (^)(BOOL success, NSString* urlString))callblock
-{
-    //    AVMutableVideoComposition *composition = [self addTitleLayerToVideoWithURL:videoUrl];
-    
-    AVURLAsset* avAsset = [AVURLAsset URLAssetWithURL:videoUrl options:nil];
-    NSArray* compatiblePresets = [AVAssetExportSession exportPresetsCompatibleWithAsset:avAsset];
-    
-    if ([compatiblePresets containsObject:AVAssetExportPresetMediumQuality]) {
-        AVAssetExportSession* exportSession = [[AVAssetExportSession alloc] initWithAsset:avAsset presetName:AVAssetExportPresetMediumQuality];
-        NSDateFormatter* formater = [[NSDateFormatter alloc] init];
-        [formater setDateFormat:@"yyyy-MM-dd-HH:mm:ss"];
-        // NSString *path = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@.mp4", [formater stringFromDate:[NSDate date]]];
-        
-        exportSession.outputURL = [self filePathUrlWithUrl:url]; //转换输出地址
-        exportSession.outputFileType = AVFileTypeMPEG4; //转换格式 支持安卓设备播放格式
-        exportSession.shouldOptimizeForNetworkUse = YES;
-        //       exportSession.videoComposition = composition;
-        [exportSession exportAsynchronouslyWithCompletionHandler:^{
-            switch ([exportSession status]) {
-                case AVAssetExportSessionStatusFailed:
-                    NSLog(@"%@",exportSession.error);
-                    if (callblock) {
-                        callblock(NO,[NSString stringWithFormat:@"%@",exportSession.error]);
-                    }
-                    break;
-                case AVAssetExportSessionStatusCancelled:
-                    break;
-                case AVAssetExportSessionStatusCompleted:{
-                    NSLog(@"转换完成");
-                    NSLog(@"---文件大小:---->%f----地址-----> %@",[self getFileSizeWithUrl:[self filePathUrlWithUrl:url]],[self filePathUrlWithUrl:url]);
-                    if (callblock) {
-                        callblock(YES,[self filePathWithUrl:url]);
-                    }
-                    break;
-                }
-                default:
-                    break;
-            }
-        }];
-    }
-}
-
-
-- (CGFloat)getFileSizeWithPath:(NSString*)path
-{
-    NSFileManager* fileManager = [[NSFileManager alloc] init];
-    float filesize = -1.0;
-    if ([fileManager fileExistsAtPath:[self filePathWithUrl:path]]) {
-        NSDictionary* fileDic = [fileManager attributesOfItemAtPath:[self filePathWithUrl:path] error:nil]; //获取文件的属性
-        unsigned long long size = [[fileDic objectForKey:NSFileSize] longLongValue];
-        filesize = 1.0 * size / 1024;
-    }
-    return filesize;
-}
-
-- (CGFloat)getFileSizeWithUrl:(NSURL*)url
-{
-    NSFileManager* fileManager = [[NSFileManager alloc] init];
-    float filesize = -1.0;
-    if ([fileManager fileExistsAtPath:url.path]) {
-        NSDictionary* fileDic = [fileManager attributesOfItemAtPath:url.path error:nil]; //获取文件的属性
-        unsigned long long size = [[fileDic objectForKey:NSFileSize] longLongValue];
-        filesize = 1.0 * size / 1024;
-    }
-    return filesize;
-}
-
-- (NSString*)filePathWithUrl:(NSString*)url
-{
-    return [NSString stringWithFormat:@"%@/%@.mp4", [self getFileBasePath], url];
-}
-
-- (NSURL*)filePathUrlWithUrl:(NSString*)url
-{
-    return [NSURL fileURLWithPath:[self filePathWithUrl:url]];
-}
-
-/*
- *   获得根路径
- */
-- (NSString*)getFileBasePath
-{
-    NSString* basePath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
-    NSString* path = [basePath stringByAppendingPathComponent:@"Download"];
-    
-    return path;
-}
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
-
 @end

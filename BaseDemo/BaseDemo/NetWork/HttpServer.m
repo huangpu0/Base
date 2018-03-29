@@ -231,13 +231,8 @@ static AFHTTPSessionManager *manager;
         });
         NSLog(@"下载进度:==%.2f",100.0*downloadProgress.completedUnitCount/downloadProgress.totalUnitCount);
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        
-        NSString *localFilePath = [fileName ? fileName : @"filePath" stringByAppendingPathComponent:response.suggestedFilename];
-        
-        NSString *filePath= [[FilesManager defaultManager]fileCreateWithName:localFilePath];
-       
         //返回文件位置的URL路径
-        return [NSURL fileURLWithPath:filePath];
+        return [NSURL fileURLWithPath:[FilesManager createDirectory:@"视频" withFilePath:response.suggestedFilename]];
         
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         if(failureBlock && error) {failureBlock(error) ; return ;};
