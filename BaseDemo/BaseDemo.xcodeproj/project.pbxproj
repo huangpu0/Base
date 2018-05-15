@@ -17,6 +17,14 @@
 		F63428932063B8AE00E2B9F5 /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F634288C2063B8AE00E2B9F5 /* YYCache.m */; };
 		F63428942063B8AE00E2B9F5 /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = F63428902063B8AE00E2B9F5 /* YYKVStorage.m */; };
 		F63428952063B8AE00E2B9F5 /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F63428912063B8AE00E2B9F5 /* YYMemoryCache.m */; };
+		F6407A7A20A575280029516D /* FireworksView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6407A7920A575280029516D /* FireworksView.m */; };
+		F6407A9120A59DD30029516D /* SportsCarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6407A9020A59DD30029516D /* SportsCarView.m */; };
+		F6407A9320A59DD80029516D /* SportsCarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6407A9220A59DD80029516D /* SportsCarView.xib */; };
+		F6407A9620A59DE40029516D /* PlaneView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6407A9520A59DE40029516D /* PlaneView.m */; };
+		F6407A9820A59DE80029516D /* PlaneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6407A9720A59DE80029516D /* PlaneView.xib */; };
+		F6407A9B20A68AA20029516D /* RocketView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6407A9A20A68AA20029516D /* RocketView.m */; };
+		F6407A9D20A68AB60029516D /* RocketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6407A9C20A68AB60029516D /* RocketView.xib */; };
+		F6407AA020A68CCF0029516D /* DiamondView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6407A9F20A68CCF0029516D /* DiamondView.m */; };
 		F67109341FD656C000D2C2C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109331FD656C000D2C2C2 /* AppDelegate.m */; };
 		F67109371FD656C000D2C2C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109361FD656C000D2C2C2 /* ViewController.m */; };
 		F671093A1FD656C000D2C2C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F67109381FD656C000D2C2C2 /* Main.storyboard */; };
@@ -85,6 +93,19 @@
 		F634288F2063B8AE00E2B9F5 /* YYCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCache.h; sourceTree = "<group>"; };
 		F63428902063B8AE00E2B9F5 /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
 		F63428912063B8AE00E2B9F5 /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
+		F6407A7820A575280029516D /* FireworksView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FireworksView.h; sourceTree = "<group>"; };
+		F6407A7920A575280029516D /* FireworksView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireworksView.m; sourceTree = "<group>"; };
+		F6407A8F20A59DC60029516D /* SportsCarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SportsCarView.h; sourceTree = "<group>"; };
+		F6407A9020A59DD30029516D /* SportsCarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SportsCarView.m; sourceTree = "<group>"; };
+		F6407A9220A59DD80029516D /* SportsCarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SportsCarView.xib; sourceTree = "<group>"; };
+		F6407A9420A59DDF0029516D /* PlaneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneView.h; sourceTree = "<group>"; };
+		F6407A9520A59DE40029516D /* PlaneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneView.m; sourceTree = "<group>"; };
+		F6407A9720A59DE80029516D /* PlaneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaneView.xib; sourceTree = "<group>"; };
+		F6407A9920A68AA20029516D /* RocketView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RocketView.h; sourceTree = "<group>"; };
+		F6407A9A20A68AA20029516D /* RocketView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RocketView.m; sourceTree = "<group>"; };
+		F6407A9C20A68AB60029516D /* RocketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketView.xib; sourceTree = "<group>"; };
+		F6407A9E20A68CCF0029516D /* DiamondView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiamondView.h; sourceTree = "<group>"; };
+		F6407A9F20A68CCF0029516D /* DiamondView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiamondView.m; sourceTree = "<group>"; };
 		F671092F1FD656C000D2C2C2 /* BaseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67109321FD656C000D2C2C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F67109331FD656C000D2C2C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -187,6 +208,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F6015A2520A55E51004B2CB8 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				F6407A7820A575280029516D /* FireworksView.h */,
+				F6407A7920A575280029516D /* FireworksView.m */,
+				F6407A8F20A59DC60029516D /* SportsCarView.h */,
+				F6407A9020A59DD30029516D /* SportsCarView.m */,
+				F6407A9220A59DD80029516D /* SportsCarView.xib */,
+				F6407A9420A59DDF0029516D /* PlaneView.h */,
+				F6407A9520A59DE40029516D /* PlaneView.m */,
+				F6407A9720A59DE80029516D /* PlaneView.xib */,
+				F6407A9920A68AA20029516D /* RocketView.h */,
+				F6407A9A20A68AA20029516D /* RocketView.m */,
+				F6407A9C20A68AB60029516D /* RocketView.xib */,
+				F6407A9E20A68CCF0029516D /* DiamondView.h */,
+				F6407A9F20A68CCF0029516D /* DiamondView.m */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		F61D15121FD7C86100025F9A /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +291,7 @@
 				F67109331FD656C000D2C2C2 /* AppDelegate.m */,
 				F67109351FD656C000D2C2C2 /* ViewController.h */,
 				F67109361FD656C000D2C2C2 /* ViewController.m */,
+				F6015A2520A55E51004B2CB8 /* Animations */,
 				F6C909521FD67B2C00C8F04C /* Tool */,
 				F67109751FD663B800D2C2C2 /* NetWork */,
 				F671096C1FD660BF00D2C2C2 /* ViewControllers */,
@@ -494,7 +536,7 @@
 		F67109271FD656C000D2C2C2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "朴子hp";
 				TargetAttributes = {
 					F671092E1FD656C000D2C2C2 = {
@@ -540,6 +582,9 @@
 			files = (
 				F67109721FD660BF00D2C2C2 /* HomePageViewController.xib in Resources */,
 				F671093F1FD656C000D2C2C2 /* LaunchScreen.storyboard in Resources */,
+				F6407A9D20A68AB60029516D /* RocketView.xib in Resources */,
+				F6407A9320A59DD80029516D /* SportsCarView.xib in Resources */,
+				F6407A9820A59DE80029516D /* PlaneView.xib in Resources */,
 				F671093C1FD656C000D2C2C2 /* Assets.xcassets in Resources */,
 				F61D15191FD7FC7000025F9A /* ProgressHUD.bundle in Resources */,
 				F671093A1FD656C000D2C2C2 /* Main.storyboard in Resources */,
@@ -626,8 +671,10 @@
 				F6C909811FD67B2C00C8F04C /* LPUserModel.m in Sources */,
 				F67109731FD660BF00D2C2C2 /* HomePageViewController.m in Sources */,
 				F63428882063B89E00E2B9F5 /* NetworkCache.m in Sources */,
+				F6407A7A20A575280029516D /* FireworksView.m in Sources */,
 				F6C9097F1FD67B2C00C8F04C /* Colors.m in Sources */,
 				F6C909991FD6A10700C8F04C /* CallWebView.m in Sources */,
+				F6407A9120A59DD30029516D /* SportsCarView.m in Sources */,
 				F6C9099D1FD6A23700C8F04C /* DateFormat.m in Sources */,
 				F67109371FD656C000D2C2C2 /* ViewController.m in Sources */,
 				F624A4CA1FD8F8C2008882C0 /* UIView+Extension.m in Sources */,
@@ -643,12 +690,15 @@
 				F69F00CF2068E33700E23E34 /* FilesManager.m in Sources */,
 				F6C909911FD6965300C8F04C /* HttpBaseModel.m in Sources */,
 				F6C909A51FD6A79800C8F04C /* NSString+Extension.m in Sources */,
+				F6407AA020A68CCF0029516D /* DiamondView.m in Sources */,
 				F6C909801FD67B2C00C8F04C /* BaseModel.m in Sources */,
 				F6C909871FD67B2C00C8F04C /* Keyboard.m in Sources */,
 				F6C9097C1FD67B2C00C8F04C /* NSString+RegExp.m in Sources */,
 				F67109741FD660BF00D2C2C2 /* HomePageRootViewController.m in Sources */,
+				F6407A9B20A68AA20029516D /* RocketView.m in Sources */,
 				F624A4C61FD8F472008882C0 /* NSDate+Extension.m in Sources */,
 				F67109421FD656C000D2C2C2 /* main.m in Sources */,
+				F6407A9620A59DE40029516D /* PlaneView.m in Sources */,
 				F63428932063B8AE00E2B9F5 /* YYCache.m in Sources */,
 				F6C9098B1FD67C1300C8F04C /* Reachability.m in Sources */,
 				F67109341FD656C000D2C2C2 /* AppDelegate.m in Sources */,
@@ -721,6 +771,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -728,6 +779,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -776,6 +828,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -783,6 +836,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -817,7 +871,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4VN752HTB2;
+				DEVELOPMENT_TEAM = HXSKT393M6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = BaseDemo/Info.plist;
@@ -836,7 +890,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4VN752HTB2;
+				DEVELOPMENT_TEAM = HXSKT393M6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = BaseDemo/Info.plist;

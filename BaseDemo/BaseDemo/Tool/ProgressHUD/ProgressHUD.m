@@ -10,7 +10,7 @@
 
 #define KbackViewW 100.0f
 #define KbackViewH 100.0f
-#define KImageViewW 40.0f
+#define KImageViewW 100.0f
 
 #define KMainW [UIScreen mainScreen].bounds.size.width
 #define KMainH [UIScreen mainScreen].bounds.size.height
@@ -235,8 +235,8 @@
     if (_kImageView == nil) {
         _kImageView = [[UIImageView alloc] initWithFrame:CGRectMake((KMainW-KImageViewW)/2,(KMainH-KImageViewW)/2-20, KImageViewW, KImageViewW)];
         NSMutableArray *array = [NSMutableArray array];
-        for (int i = 1; i < 5; i++) {
-            NSString *imageName = [NSString stringWithFormat:@"e_ico_%d", i];
+        for (int i = 0; i < 11 ; i++) {
+            NSString *imageName = [NSString stringWithFormat:@"gifs_%d", i];
             UIImage *image = [UIImage imageNamed:imageName];
             [array addObject:image];
         }

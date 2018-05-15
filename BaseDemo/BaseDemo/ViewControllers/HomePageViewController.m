@@ -8,9 +8,17 @@
 
 #import "HomePageViewController.h"
 #import "FilesManager.h"
+#import "FireworksView.h"
+#import "PlaneView.h"
+#import "SportsCarView.h"
+#import "RocketView.h"
+#import "UIView+Extension.h"
+#import "DiamondView.h"
+
 @interface HomePageViewController ()<UISearchControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIImageView *teView;
+
 @property (weak, nonatomic) UIImageView *testView;
 @end
 
@@ -44,7 +52,15 @@
     }
 }
 - (IBAction)sureBtn:(id)sender {
-    [ProgressHUD showMessage:@"你说的好的"];
+
+    SportsCarView *car = [SportsCarView loadCarViewWithPoint:CGPointZero];
+    NSMutableArray *pointArrs = [[NSMutableArray alloc] init];
+    CGFloat width = [UIScreen mainScreen].bounds.size.width / 2;
+    [pointArrs addObject:NSStringFromCGRect(CGRectMake(width, 300, width, 300))];
+    car.curveControlAndEndPoints = pointArrs;
+    [car addAnimationsMoveToPoint:CGPointMake(self.view.bounds.size.width, 300) endPoint:CGPointMake(-166, 0)];
+    [self.view addSubview:car];
+
 }
 - (void)selectItem:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 0) {
