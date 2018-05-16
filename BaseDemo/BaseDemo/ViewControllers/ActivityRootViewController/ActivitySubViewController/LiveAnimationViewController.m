@@ -21,12 +21,12 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [self setNavigationWithTitle:@"动画展现" leftBtnWithTitle:@""];
+    
+    [self setNavigationWithTitle:@"动画效果" leftBtnWithTitle:nil];
+    
     [self touchAnimation:self.tag];
 }
-- (void)touchLeftBtn{
-    [self.navigationController popViewControllerAnimated:YES];
-}
+
 - (void)touchAnimation:(NSInteger)tag;{
     switch (tag) {
         case 0:{

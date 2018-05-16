@@ -18,8 +18,7 @@
     [super viewDidLoad];
     
     self.navigationBar.translucent = NO;
-    
-    
+
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
     [self.navigationBar setTitleTextAttributes:attrs];
@@ -29,14 +28,13 @@
     [navVar setBarTintColor:[UIColor orangeColor]];
     
     id target = self.interactivePopGestureRecognizer.delegate;
-    SEL handleTransition =
-    NSSelectorFromString(@"handleNavigationTransition:");
+    SEL handleTransition = NSSelectorFromString(@"handleNavigationTransition:");
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:target action:handleTransition];
-    
     pan.delegate = self;
     [self.view addGestureRecognizer:pan];
     self.interactivePopGestureRecognizer.enabled = NO;
+    
 }
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {

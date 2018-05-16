@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+
 @end
 
 @implementation ViewController
@@ -31,12 +32,18 @@
     self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
     
 }
+
 -(void)setNavigationBar{
     self.navigationController.navigationBar.translucent= NO;
     self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
 }
+
+/**
+ 导航栏   显示文字
+ @param title 导航栏显示文字
+ */
 -(void)setNavigationWithTitle:(NSString *)title{
     [self setNavigationBar];
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
@@ -52,16 +59,23 @@
     }
 }
 
+/**
+ 导航栏文字➕左返回按钮 【leftTitle -->>  nil 显示默认返回按钮图片 / \ 文字显示图片+文字形式】
+ @param title 导航栏显示文字
+ @param leftTitle 返回按钮
+ */
 -(void)setNavigationWithTitle:(NSString *)title leftBtnWithTitle:(NSString *)leftTitle{
     [self setNavigationWithTitle:title];
     if ([leftTitle isEqualToString:@""]) {
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 30)];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
+        view.backgroundColor = [UIColor blueColor];
         view.userInteractionEnabled = YES;
         UITapGestureRecognizer *imgtap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchLeftBtn)];
         [view addGestureRecognizer:imgtap];
         
         UIImageView *imgView = [[UIImageView alloc] init];
-        imgView.frame = CGRectMake(0, 6, 11, 18);
+        imgView.backgroundColor = [UIColor blackColor];
+        imgView.frame = CGRectMake(0, 4, 13, 22);
         imgView.image = [UIImage imageNamed:@"nav_back"];
         [view addSubview:imgView];
         
@@ -69,15 +83,14 @@
         UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
         negativeSpacer.width = -6;//这个数值可以根据情况自由变化
         self.navigationItem.leftBarButtonItems = @[negativeSpacer,leftBar];
-    }else if ([leftTitle isEqualToString:@"1"]){
     }else{
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 30)];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
         view.userInteractionEnabled = YES;
         UITapGestureRecognizer *imgtap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchLeftBtn)];
         [view addGestureRecognizer:imgtap];
         
         UIImageView *imgView = [[UIImageView alloc] init];
-        imgView.frame = CGRectMake(0, 6, 11, 18);
+        imgView.frame = CGRectMake(0, 4, 13, 22);
         imgView.image = [UIImage imageNamed:@"nav_back"];
         [view addSubview:imgView];
         
@@ -86,32 +99,23 @@
         lab.textColor = [UIColor whiteColor];
         lab.font = [UIFont systemFontOfSize:15];
         [lab sizeToFit];
-        lab.frame = CGRectMake(CGRectGetMaxX(imgView.frame) + 3, (view.frame.size.height - lab.frame.size.height)/2, lab.frame.size.width, lab.frame.size.height);
+        lab.frame = CGRectMake(CGRectGetMaxX(imgView.frame) + 5, (view.frame.size.height - lab.frame.size.height)/2, lab.frame.size.width, lab.frame.size.height);
         [view addSubview:lab];
         
         UIBarButtonItem *leftBar = [[UIBarButtonItem alloc] initWithCustomView:view];
         UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
         negativeSpacer.width = -6;//这个数值可以根据情况自由变化
+        
         self.navigationItem.leftBarButtonItems = @[negativeSpacer,leftBar];
     }
 }
 
--(void)setNavigationWithTitle:(NSString *)title rightBtnWithImageName:(NSString *)imageName leftBtnWithTitle:(NSString *)leftTitle{
-    [self setNavigationWithTitle:title leftBtnWithTitle:leftTitle];
-    if (imageName) {
-        UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
-        img.userInteractionEnabled = YES;
-        UITapGestureRecognizer *imgtap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchRightBtn)];
-        [img addGestureRecognizer:imgtap];
-        
-        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-        negativeSpacer.width = 0;//这个数值可以根据情况自由变化
-        
-        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithCustomView:img];
-        self.navigationItem.rightBarButtonItems = @[negativeSpacer,right];
-    }
-}
-
+/**
+ 导航栏文字➕左返回按钮➕右侧文字 【rightTitle -->>  右侧显示文字 】
+ @param title 导航栏显示文字
+ @param rightTitle 右侧显示文字
+ @param leftTitle  返回按钮
+ */
 -(void)setNavigationWithTitle:(NSString *)title rightBtnWithTitle:(NSString *)rightTitle leftBtnWithTitle:(NSString *)leftTitle{
     [self setNavigationWithTitle:title leftBtnWithTitle:leftTitle];
     
@@ -129,72 +133,79 @@
         self.navigationItem.rightBarButtonItems = @[negativeSpacer,right];
     }
 }
--(void)setNavigationWithTitle:(NSString *)title rightBtnWithImageName:(NSString *)imageName rightBtnWithTitle:(NSString *)rightTitle leftBtnWithTitle:(NSString *)leftTitle;{
+
+/**
+ 导航栏文字➕左返回按钮➕右侧显示图片【rightImageName -->>  右侧显示图片】
+ @param title 导航栏显示文字
+ @param rightImageName 右侧显示图片
+ @param leftTitle 返回按钮
+ */
+-(void)setNavigationWithTitle:(NSString *)title rightBtnWithImageName:(NSString *)rightImageName leftBtnWithTitle:(NSString *)leftTitle{
     [self setNavigationWithTitle:title leftBtnWithTitle:leftTitle];
-    if (rightTitle&&imageName) {
-        UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        rightBtn.titleLabel.font = [UIFont systemFontOfSize:15];
-        [rightBtn setTitle:rightTitle forState:UIControlStateNormal];
-        [rightBtn setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
-        [rightBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [rightBtn sizeToFit];
-        [rightBtn addTarget:self action:@selector(touchRightBtn) forControlEvents:UIControlEventTouchUpInside];
-        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-        negativeSpacer.width = -12;//这个数值可以根据情况自由变化
+    if (rightImageName) {
+        UIImageView *rightImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:rightImageName]];
+        rightImage.backgroundColor = [UIColor blackColor];
+        rightImage.userInteractionEnabled = YES;
+        UITapGestureRecognizer *imgTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchRightBtn)];
+        [rightImage addGestureRecognizer:imgTap];
         
-        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
-        self.navigationItem.rightBarButtonItems = @[negativeSpacer,right];
+        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+        negativeSpacer.width = 0;//这个数值可以根据情况自由变化
+        
+        UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithCustomView:rightImage];
+        self.navigationItem.rightBarButtonItems = @[negativeSpacer,rightBtn];
     }
 }
 
--(void)setNavigationWithTitle:(NSString *)title rightBtnWithBgImageName:(NSString *)rightName leftBtnWithTitle:(NSString *)leftTitle{
+/**
+ 导航栏文字➕左返回按钮➕右侧双图片【rightImageName -->>  最右侧显示图片 / \ rightOtherIamgeName -->> 紧挨最右侧显示图片】
+ @param title 导航栏显示文字
+ @param rightImageName 最右侧显示图片
+ @param rightOtherIamgeName 紧挨最右侧显示图片
+ @param leftTitle 返回按钮
+ */
+-(void)setNavigationWithTitle:(NSString *)title rightBtnWithImageName:(NSString *)rightImageName rightBtnWithOtherImageName:(NSString *)rightOtherIamgeName leftBtnWithTitle:(NSString *)leftTitle;{
     [self setNavigationWithTitle:title leftBtnWithTitle:leftTitle];
-    if ([rightName isEqualToString:@"1"]) {
+    if (rightImageName&&rightOtherIamgeName) {
+        
         UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        rightBtn.titleLabel.font = [UIFont systemFontOfSize:15];
-        [rightBtn setBackgroundImage:[UIImage imageNamed:@"home_ico_more"] forState:UIControlStateNormal];
+        [rightBtn setImage:[UIImage imageNamed:rightImageName] forState:UIControlStateNormal];
         [rightBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [rightBtn sizeToFit];
         [rightBtn addTarget:self action:@selector(touchRightBtn) forControlEvents:UIControlEventTouchUpInside];
-        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-        negativeSpacer.width = -12;//这个数值可以根据情况自由变化
-        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
-        self.navigationItem.rightBarButtonItems = @[negativeSpacer,right];
-    }
-    if (![rightName isEqualToString:@"筛选"]) {
-        UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [rightBtn setTitle:rightName forState:UIControlStateNormal];
-        rightBtn.titleLabel.font = [UIFont systemFontOfSize:15];
-        [rightBtn setBackgroundImage:[UIImage imageNamed:@"d_nav_fb"] forState:UIControlStateNormal];
-        [rightBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [rightBtn sizeToFit];
-        [rightBtn addTarget:self action:@selector(touchRightBtn) forControlEvents:UIControlEventTouchUpInside];
-        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-        negativeSpacer.width = -12;//这个数值可以根据情况自由变化
-        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
-        self.navigationItem.rightBarButtonItems = @[negativeSpacer,right];
-    }
-    if ([rightName isEqualToString:@"筛选"]){
-        UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [rightBtn setTitle:rightName forState:UIControlStateNormal];
-        rightBtn.titleLabel.font = [UIFont systemFontOfSize:15];
-        [rightBtn setBackgroundImage:[UIImage imageNamed:@"e0_nav_btn"] forState:UIControlStateNormal];
-        [rightBtn sizeToFit];
-        [rightBtn addTarget:self action:@selector(touchRightBtn) forControlEvents:UIControlEventTouchUpInside];
-        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-        negativeSpacer.width = -12;//这个数值可以根据情况自由变化
-        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
-        self.navigationItem.rightBarButtonItems = @[negativeSpacer,right];
+        
+        UIButton *rightOtherBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        rightOtherBtn.frame = CGRectMake(0, 40, 35, 35);
+        [rightOtherBtn setImage:[UIImage imageNamed:rightOtherIamgeName] forState:UIControlStateNormal];
+        [rightOtherBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [rightOtherBtn sizeToFit];
+        [rightOtherBtn addTarget:self action:@selector(touchOtherRightBtn) forControlEvents:UIControlEventTouchUpInside];
+       
+        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+        UIBarButtonItem *rightOtherItem = [[UIBarButtonItem alloc] initWithCustomView:rightOtherBtn];
+        self.navigationItem.rightBarButtonItems = @[rightItem,rightOtherItem];
     }
 }
-#pragma mark - 点击左边按钮
+
+#pragma mark -->> 导航条左按钮返回触发的方法
 -(void)touchLeftBtn{
     //在子类中实现
 }
-#pragma mark - 点击右边按钮
+
+#pragma MARK -->> 导航条右侧按钮触发的方法
 -(void)touchRightBtn{
     //在子类中实现
+     [self.navigationController popViewControllerAnimated:YES];
 }
+
+#pragma MARK -->> 导航条紧挨最右侧右按钮触发的方法
+-(void)touchOtherRightBtn;{
+    //在子类中实现
+}
+
+/**
+ 屏幕竖屏设置相关处理
+ */
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations{
     return UIInterfaceOrientationMaskPortrait;
 }
@@ -204,4 +215,5 @@
 -(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
     return UIInterfaceOrientationPortrait;
 }
+
 @end

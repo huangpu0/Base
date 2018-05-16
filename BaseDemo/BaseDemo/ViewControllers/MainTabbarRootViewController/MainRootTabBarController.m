@@ -19,26 +19,29 @@
 
 @implementation MainRootTabBarController
 
-+ (void)initIalize{
++ (void)initialize{
     
     UITabBarItem *tabBarItem = [UITabBarItem appearanceWhenContainedInInstancesOfClasses:@[self]];
+    
     NSMutableDictionary *dictNormal = [NSMutableDictionary dictionary];
     dictNormal[NSForegroundColorAttributeName] = [UIColor grayColor];
     dictNormal[NSFontAttributeName] = [UIFont systemFontOfSize:11];
     
     NSMutableDictionary *dictSelected = [NSMutableDictionary dictionary];
-    dictSelected[NSForegroundColorAttributeName] = [UIColor redColor];
+    dictSelected[NSForegroundColorAttributeName] = [UIColor orangeColor];
     dictSelected[NSFontAttributeName] = [UIFont systemFontOfSize:11];
     
     [tabBarItem setTitleTextAttributes:dictNormal forState:UIControlStateNormal];
     [tabBarItem setTitleTextAttributes:dictSelected forState:UIControlStateSelected];
 }
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     
     [self setUpMainTabBar];
 }
+
 #pragma MARK -- 建立主要的视图模块
 - (void)setUpMainTabBar{
     
@@ -46,7 +49,6 @@
     ExploreRootViewController *exploreVC = [[ExploreRootViewController alloc]init];
     ActivityRootViewController *activityVC = [[ActivityRootViewController alloc]init];
     PersonalCenterRootViewController *personVC = [[PersonalCenterRootViewController alloc]init];
-    
     
     [self setUpChildController:homePageVC withTabBarImageNormal:@"tab_home" withTabBarImageSelected:@"tab_home_pre" withTabBarTitle:@"首页"];
 
@@ -57,9 +59,8 @@
     
     [self setUpChildController:personVC withTabBarImageNormal:@"tab_user" withTabBarImageSelected:@"tab_user_pre" withTabBarTitle:@"个人中心"];
     
-    
-    
 }
+
 /**
  设置单个tabBarButton
 
@@ -86,8 +87,9 @@
     MainNavigationController *MainNav = [[MainNavigationController alloc]initWithRootViewController:viewController];
     [self addChildViewController:MainNav];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
 }
+
 @end
