@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "HomePageRootViewController.h"
+#import "MainRootTabBarController.h"
 #import "NetWorkStatus.h"
 #import "Reachability.h"
 @interface AppDelegate ()
@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor clearColor];
-    self.window.rootViewController = [[HomePageRootViewController alloc]init];
+    self.window.rootViewController = [[MainRootTabBarController alloc]init];
     [NetWorkStatus startMonitoring];
 //苹果官方的网络状态检测
 //  Reachability *reach = [Reachability reachabilityWithHostName:@"https://www.baidu.com"];

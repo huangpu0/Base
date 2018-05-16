@@ -21,20 +21,18 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
     [self.navigationController setNavigationBarHidden:_currentViewNavigationBarHidden animated:YES];
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+    [UIApplication sharedApplication].statusBarHidden = NO;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     [UIViewController attemptRotationToDeviceOrientation];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
-}
-
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
+    
 }
 -(void)setNavigationBar{
-    self.navigationController.navigationBar.translucent=NO;
+    self.navigationController.navigationBar.translucent= NO;
     self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
@@ -181,7 +179,6 @@
         [rightBtn setTitle:rightName forState:UIControlStateNormal];
         rightBtn.titleLabel.font = [UIFont systemFontOfSize:15];
         [rightBtn setBackgroundImage:[UIImage imageNamed:@"e0_nav_btn"] forState:UIControlStateNormal];
-       // [rightBtn setTitleColor:[Colors getColorFromHex:@"ED6D00"] forState:UIControlStateNormal];
         [rightBtn sizeToFit];
         [rightBtn addTarget:self action:@selector(touchRightBtn) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];

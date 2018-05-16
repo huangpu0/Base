@@ -33,9 +33,6 @@
 		F67109421FD656C000D2C2C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109411FD656C000D2C2C2 /* main.m */; };
 		F671094C1FD656C100D2C2C2 /* BaseDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F671094B1FD656C100D2C2C2 /* BaseDemoTests.m */; };
 		F67109571FD656C100D2C2C2 /* BaseDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109561FD656C100D2C2C2 /* BaseDemoUITests.m */; };
-		F67109721FD660BF00D2C2C2 /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F671096E1FD660BF00D2C2C2 /* HomePageViewController.xib */; };
-		F67109731FD660BF00D2C2C2 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F671096F1FD660BF00D2C2C2 /* HomePageViewController.m */; };
-		F67109741FD660BF00D2C2C2 /* HomePageRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109701FD660BF00D2C2C2 /* HomePageRootViewController.m */; };
 		F67109781FD6641300D2C2C2 /* NetWorkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109771FD6641300D2C2C2 /* NetWorkStatus.m */; };
 		F69F00CF2068E33700E23E34 /* FilesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F00CE2068E33700E23E34 /* FilesManager.m */; };
 		F6C9097A1FD67B2C00C8F04C /* MJHeadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C909541FD67B2C00C8F04C /* MJHeadTool.m */; };
@@ -53,6 +50,15 @@
 		F6C909991FD6A10700C8F04C /* CallWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C909981FD6A10700C8F04C /* CallWebView.m */; };
 		F6C9099D1FD6A23700C8F04C /* DateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C9099B1FD6A23700C8F04C /* DateFormat.m */; };
 		F6C909A51FD6A79800C8F04C /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C909A41FD6A79800C8F04C /* NSString+Extension.m */; };
+		F6DA13F220AACF2300B194B9 /* MainRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DA13F020AACF2300B194B9 /* MainRootTabBarController.m */; };
+		F6DA140420AADA7D00B194B9 /* ExploreRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DA140320AADA7D00B194B9 /* ExploreRootViewController.m */; };
+		F6DA140720AADA9C00B194B9 /* HomePageRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DA140620AADA9C00B194B9 /* HomePageRootViewController.m */; };
+		F6DA140A20AADACB00B194B9 /* ActivityRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DA140920AADACB00B194B9 /* ActivityRootViewController.m */; };
+		F6DA140D20AADAEF00B194B9 /* PersonalCenterRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DA140C20AADAEF00B194B9 /* PersonalCenterRootViewController.m */; };
+		F6DA141020AADBBC00B194B9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DA140F20AADBBC00B194B9 /* LoginViewController.m */; };
+		F6DA141420AAE5ED00B194B9 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DA141320AAE5ED00B194B9 /* MainNavigationController.m */; };
+		F6DA141720ABCA7000B194B9 /* AnimationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DA141620ABCA7000B194B9 /* AnimationTableViewCell.m */; };
+		F6DA142720ABE08F00B194B9 /* LiveAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DA142620ABE08F00B194B9 /* LiveAnimationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,11 +128,6 @@
 		F67109521FD656C100D2C2C2 /* BaseDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67109561FD656C100D2C2C2 /* BaseDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseDemoUITests.m; sourceTree = "<group>"; };
 		F67109581FD656C100D2C2C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F671096D1FD660BF00D2C2C2 /* HomePageRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageRootViewController.h; sourceTree = "<group>"; };
-		F671096E1FD660BF00D2C2C2 /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageViewController.xib; sourceTree = "<group>"; };
-		F671096F1FD660BF00D2C2C2 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
-		F67109701FD660BF00D2C2C2 /* HomePageRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageRootViewController.m; sourceTree = "<group>"; };
-		F67109711FD660BF00D2C2C2 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
 		F67109761FD6641300D2C2C2 /* NetWorkStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkStatus.h; sourceTree = "<group>"; };
 		F67109771FD6641300D2C2C2 /* NetWorkStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkStatus.m; sourceTree = "<group>"; };
 		F69F00CD2068E33700E23E34 /* FilesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilesManager.h; sourceTree = "<group>"; };
@@ -163,6 +164,24 @@
 		F6C9099C1FD6A23700C8F04C /* DateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormat.h; sourceTree = "<group>"; };
 		F6C909A31FD6A79800C8F04C /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		F6C909A41FD6A79800C8F04C /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		F6DA13EF20AACF2300B194B9 /* MainRootTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainRootTabBarController.h; sourceTree = "<group>"; };
+		F6DA13F020AACF2300B194B9 /* MainRootTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainRootTabBarController.m; sourceTree = "<group>"; };
+		F6DA140220AADA7D00B194B9 /* ExploreRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExploreRootViewController.h; sourceTree = "<group>"; };
+		F6DA140320AADA7D00B194B9 /* ExploreRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExploreRootViewController.m; sourceTree = "<group>"; };
+		F6DA140520AADA9C00B194B9 /* HomePageRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageRootViewController.h; sourceTree = "<group>"; };
+		F6DA140620AADA9C00B194B9 /* HomePageRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageRootViewController.m; sourceTree = "<group>"; };
+		F6DA140820AADACB00B194B9 /* ActivityRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityRootViewController.h; sourceTree = "<group>"; };
+		F6DA140920AADACB00B194B9 /* ActivityRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityRootViewController.m; sourceTree = "<group>"; };
+		F6DA140B20AADAEF00B194B9 /* PersonalCenterRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalCenterRootViewController.h; sourceTree = "<group>"; };
+		F6DA140C20AADAEF00B194B9 /* PersonalCenterRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterRootViewController.m; sourceTree = "<group>"; };
+		F6DA140E20AADBBC00B194B9 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F6DA140F20AADBBC00B194B9 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F6DA141220AAE5ED00B194B9 /* MainNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
+		F6DA141320AAE5ED00B194B9 /* MainNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
+		F6DA141520ABCA7000B194B9 /* AnimationTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationTableViewCell.h; sourceTree = "<group>"; };
+		F6DA141620ABCA7000B194B9 /* AnimationTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationTableViewCell.m; sourceTree = "<group>"; };
+		F6DA142520ABE08F00B194B9 /* LiveAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveAnimationViewController.h; sourceTree = "<group>"; };
+		F6DA142620ABE08F00B194B9 /* LiveAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveAnimationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,7 +312,7 @@
 				F67109361FD656C000D2C2C2 /* ViewController.m */,
 				F6015A2520A55E51004B2CB8 /* Animations */,
 				F6C909521FD67B2C00C8F04C /* Tool */,
-				F67109751FD663B800D2C2C2 /* NetWork */,
+				F67109751FD663B800D2C2C2 /* Network */,
 				F671096C1FD660BF00D2C2C2 /* ViewControllers */,
 				F67109381FD656C000D2C2C2 /* Main.storyboard */,
 				F671093B1FD656C000D2C2C2 /* Assets.xcassets */,
@@ -327,16 +346,18 @@
 		F671096C1FD660BF00D2C2C2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F671096D1FD660BF00D2C2C2 /* HomePageRootViewController.h */,
-				F67109701FD660BF00D2C2C2 /* HomePageRootViewController.m */,
-				F67109711FD660BF00D2C2C2 /* HomePageViewController.h */,
-				F671096F1FD660BF00D2C2C2 /* HomePageViewController.m */,
-				F671096E1FD660BF00D2C2C2 /* HomePageViewController.xib */,
+				F6DA141120AADC0D00B194B9 /* GuideViewControoler */,
+				F6DA13EE20AACEA000B194B9 /* MainTabbarRootViewController */,
+				F6DA13F520AAD66600B194B9 /* LoginViewController */,
+				F6DA13F620AAD67600B194B9 /* HomePageRootViewController */,
+				F6DA13FF20AAD68400B194B9 /* ExploreViewRootController */,
+				F6DA140020AAD69800B194B9 /* ActivityRootViewController */,
+				F6DA140120AAD6A800B194B9 /* PersonalCenterRootViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		F67109751FD663B800D2C2C2 /* NetWork */ = {
+		F67109751FD663B800D2C2C2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				F6C909891FD67C0800C8F04C /* Reachability.h */,
@@ -350,7 +371,7 @@
 				F63428862063B89300E2B9F5 /* NetworkCache.h */,
 				F63428872063B89E00E2B9F5 /* NetworkCache.m */,
 			);
-			path = NetWork;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		F69F00CC2068E31B00E23E34 /* FilesManagerTool */ = {
@@ -471,6 +492,81 @@
 			path = "NSString+Extension";
 			sourceTree = "<group>";
 		};
+		F6DA13EE20AACEA000B194B9 /* MainTabbarRootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6DA13EF20AACF2300B194B9 /* MainRootTabBarController.h */,
+				F6DA13F020AACF2300B194B9 /* MainRootTabBarController.m */,
+				F6DA141220AAE5ED00B194B9 /* MainNavigationController.h */,
+				F6DA141320AAE5ED00B194B9 /* MainNavigationController.m */,
+			);
+			path = MainTabbarRootViewController;
+			sourceTree = "<group>";
+		};
+		F6DA13F520AAD66600B194B9 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6DA140E20AADBBC00B194B9 /* LoginViewController.h */,
+				F6DA140F20AADBBC00B194B9 /* LoginViewController.m */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		F6DA13F620AAD67600B194B9 /* HomePageRootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6DA140520AADA9C00B194B9 /* HomePageRootViewController.h */,
+				F6DA140620AADA9C00B194B9 /* HomePageRootViewController.m */,
+			);
+			path = HomePageRootViewController;
+			sourceTree = "<group>";
+		};
+		F6DA13FF20AAD68400B194B9 /* ExploreViewRootController */ = {
+			isa = PBXGroup;
+			children = (
+				F6DA140220AADA7D00B194B9 /* ExploreRootViewController.h */,
+				F6DA140320AADA7D00B194B9 /* ExploreRootViewController.m */,
+			);
+			path = ExploreViewRootController;
+			sourceTree = "<group>";
+		};
+		F6DA140020AAD69800B194B9 /* ActivityRootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6DA140820AADACB00B194B9 /* ActivityRootViewController.h */,
+				F6DA140920AADACB00B194B9 /* ActivityRootViewController.m */,
+				F6DA141520ABCA7000B194B9 /* AnimationTableViewCell.h */,
+				F6DA141620ABCA7000B194B9 /* AnimationTableViewCell.m */,
+				F6DA141820ABD44900B194B9 /* ActivitySubViewController */,
+			);
+			path = ActivityRootViewController;
+			sourceTree = "<group>";
+		};
+		F6DA140120AAD6A800B194B9 /* PersonalCenterRootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6DA140B20AADAEF00B194B9 /* PersonalCenterRootViewController.h */,
+				F6DA140C20AADAEF00B194B9 /* PersonalCenterRootViewController.m */,
+			);
+			path = PersonalCenterRootViewController;
+			sourceTree = "<group>";
+		};
+		F6DA141120AADC0D00B194B9 /* GuideViewControoler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GuideViewControoler;
+			sourceTree = "<group>";
+		};
+		F6DA141820ABD44900B194B9 /* ActivitySubViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6DA142520ABE08F00B194B9 /* LiveAnimationViewController.h */,
+				F6DA142620ABE08F00B194B9 /* LiveAnimationViewController.m */,
+			);
+			path = ActivitySubViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -580,7 +676,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F67109721FD660BF00D2C2C2 /* HomePageViewController.xib in Resources */,
 				F671093F1FD656C000D2C2C2 /* LaunchScreen.storyboard in Resources */,
 				F6407A9D20A68AB60029516D /* RocketView.xib in Resources */,
 				F6407A9320A59DD80029516D /* SportsCarView.xib in Resources */,
@@ -669,11 +764,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6C909811FD67B2C00C8F04C /* LPUserModel.m in Sources */,
-				F67109731FD660BF00D2C2C2 /* HomePageViewController.m in Sources */,
 				F63428882063B89E00E2B9F5 /* NetworkCache.m in Sources */,
+				F6DA141020AADBBC00B194B9 /* LoginViewController.m in Sources */,
 				F6407A7A20A575280029516D /* FireworksView.m in Sources */,
 				F6C9097F1FD67B2C00C8F04C /* Colors.m in Sources */,
 				F6C909991FD6A10700C8F04C /* CallWebView.m in Sources */,
+				F6DA13F220AACF2300B194B9 /* MainRootTabBarController.m in Sources */,
+				F6DA141720ABCA7000B194B9 /* AnimationTableViewCell.m in Sources */,
 				F6407A9120A59DD30029516D /* SportsCarView.m in Sources */,
 				F6C9099D1FD6A23700C8F04C /* DateFormat.m in Sources */,
 				F67109371FD656C000D2C2C2 /* ViewController.m in Sources */,
@@ -681,22 +778,27 @@
 				F63428942063B8AE00E2B9F5 /* YYKVStorage.m in Sources */,
 				F61D15151FD7C87700025F9A /* ProgressHUD.m in Sources */,
 				F63428952063B8AE00E2B9F5 /* YYMemoryCache.m in Sources */,
+				F6DA141420AAE5ED00B194B9 /* MainNavigationController.m in Sources */,
 				F6C9097B1FD67B2C00C8F04C /* MJAutoFooterTool.m in Sources */,
 				F67109781FD6641300D2C2C2 /* NetWorkStatus.m in Sources */,
 				F6C9097A1FD67B2C00C8F04C /* MJHeadTool.m in Sources */,
 				F6C9098D1FD67C1C00C8F04C /* HttpServer.m in Sources */,
 				F6C909821FD67B2C00C8F04C /* LPTitleModel.m in Sources */,
 				F6C909951FD6A02600C8F04C /* Convert.m in Sources */,
+				F6DA140D20AADAEF00B194B9 /* PersonalCenterRootViewController.m in Sources */,
+				F6DA142720ABE08F00B194B9 /* LiveAnimationViewController.m in Sources */,
 				F69F00CF2068E33700E23E34 /* FilesManager.m in Sources */,
+				F6DA140720AADA9C00B194B9 /* HomePageRootViewController.m in Sources */,
 				F6C909911FD6965300C8F04C /* HttpBaseModel.m in Sources */,
 				F6C909A51FD6A79800C8F04C /* NSString+Extension.m in Sources */,
 				F6407AA020A68CCF0029516D /* DiamondView.m in Sources */,
 				F6C909801FD67B2C00C8F04C /* BaseModel.m in Sources */,
 				F6C909871FD67B2C00C8F04C /* Keyboard.m in Sources */,
 				F6C9097C1FD67B2C00C8F04C /* NSString+RegExp.m in Sources */,
-				F67109741FD660BF00D2C2C2 /* HomePageRootViewController.m in Sources */,
+				F6DA140A20AADACB00B194B9 /* ActivityRootViewController.m in Sources */,
 				F6407A9B20A68AA20029516D /* RocketView.m in Sources */,
 				F624A4C61FD8F472008882C0 /* NSDate+Extension.m in Sources */,
+				F6DA140420AADA7D00B194B9 /* ExploreRootViewController.m in Sources */,
 				F67109421FD656C000D2C2C2 /* main.m in Sources */,
 				F6407A9620A59DE40029516D /* PlaneView.m in Sources */,
 				F63428932063B8AE00E2B9F5 /* YYCache.m in Sources */,
