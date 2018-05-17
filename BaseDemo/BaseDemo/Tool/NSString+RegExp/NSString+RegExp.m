@@ -87,6 +87,9 @@
     return [phonePred evaluateWithObject:self];
 }
 
+/**
+ @brief     是否符合IP格式，xxx.xxx.xxx.xxx
+ */
 - (BOOL)isValidIP;
 {
     NSString *regex = [NSString stringWithFormat:@"^(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})$"];

@@ -25,6 +25,8 @@
 		F6407A9B20A68AA20029516D /* RocketView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6407A9A20A68AA20029516D /* RocketView.m */; };
 		F6407A9D20A68AB60029516D /* RocketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6407A9C20A68AB60029516D /* RocketView.xib */; };
 		F6407AA020A68CCF0029516D /* DiamondView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6407A9F20A68CCF0029516D /* DiamondView.m */; };
+		F64F4E2220AD175E0060AD1A /* NetworkState.m in Sources */ = {isa = PBXBuildFile; fileRef = F64F4E2120AD175E0060AD1A /* NetworkState.m */; };
+		F64F4E2520AD30140060AD1A /* NetworkView.m in Sources */ = {isa = PBXBuildFile; fileRef = F64F4E2420AD30140060AD1A /* NetworkView.m */; };
 		F67109341FD656C000D2C2C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109331FD656C000D2C2C2 /* AppDelegate.m */; };
 		F67109371FD656C000D2C2C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109361FD656C000D2C2C2 /* ViewController.m */; };
 		F671093A1FD656C000D2C2C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F67109381FD656C000D2C2C2 /* Main.storyboard */; };
@@ -33,7 +35,6 @@
 		F67109421FD656C000D2C2C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109411FD656C000D2C2C2 /* main.m */; };
 		F671094C1FD656C100D2C2C2 /* BaseDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F671094B1FD656C100D2C2C2 /* BaseDemoTests.m */; };
 		F67109571FD656C100D2C2C2 /* BaseDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109561FD656C100D2C2C2 /* BaseDemoUITests.m */; };
-		F67109781FD6641300D2C2C2 /* NetWorkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109771FD6641300D2C2C2 /* NetWorkStatus.m */; };
 		F69F00CF2068E33700E23E34 /* FilesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F00CE2068E33700E23E34 /* FilesManager.m */; };
 		F6C9097A1FD67B2C00C8F04C /* MJHeadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C909541FD67B2C00C8F04C /* MJHeadTool.m */; };
 		F6C9097B1FD67B2C00C8F04C /* MJAutoFooterTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C909551FD67B2C00C8F04C /* MJAutoFooterTool.m */; };
@@ -112,6 +113,10 @@
 		F6407A9C20A68AB60029516D /* RocketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketView.xib; sourceTree = "<group>"; };
 		F6407A9E20A68CCF0029516D /* DiamondView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiamondView.h; sourceTree = "<group>"; };
 		F6407A9F20A68CCF0029516D /* DiamondView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiamondView.m; sourceTree = "<group>"; };
+		F64F4E2020AD175E0060AD1A /* NetworkState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkState.h; sourceTree = "<group>"; };
+		F64F4E2120AD175E0060AD1A /* NetworkState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkState.m; sourceTree = "<group>"; };
+		F64F4E2320AD30080060AD1A /* NetworkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkView.h; sourceTree = "<group>"; };
+		F64F4E2420AD30140060AD1A /* NetworkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkView.m; sourceTree = "<group>"; };
 		F671092F1FD656C000D2C2C2 /* BaseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67109321FD656C000D2C2C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F67109331FD656C000D2C2C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -128,8 +133,6 @@
 		F67109521FD656C100D2C2C2 /* BaseDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67109561FD656C100D2C2C2 /* BaseDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseDemoUITests.m; sourceTree = "<group>"; };
 		F67109581FD656C100D2C2C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F67109761FD6641300D2C2C2 /* NetWorkStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkStatus.h; sourceTree = "<group>"; };
-		F67109771FD6641300D2C2C2 /* NetWorkStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkStatus.m; sourceTree = "<group>"; };
 		F69F00CD2068E33700E23E34 /* FilesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilesManager.h; sourceTree = "<group>"; };
 		F69F00CE2068E33700E23E34 /* FilesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilesManager.m; sourceTree = "<group>"; };
 		F6C909501FD6763100C8F04C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
@@ -362,8 +365,10 @@
 			children = (
 				F6C909891FD67C0800C8F04C /* Reachability.h */,
 				F6C9098A1FD67C1300C8F04C /* Reachability.m */,
-				F67109761FD6641300D2C2C2 /* NetWorkStatus.h */,
-				F67109771FD6641300D2C2C2 /* NetWorkStatus.m */,
+				F64F4E2020AD175E0060AD1A /* NetworkState.h */,
+				F64F4E2120AD175E0060AD1A /* NetworkState.m */,
+				F64F4E2320AD30080060AD1A /* NetworkView.h */,
+				F64F4E2420AD30140060AD1A /* NetworkView.m */,
 				F6C9098F1FD6965300C8F04C /* HttpBaseModel.h */,
 				F6C909901FD6965300C8F04C /* HttpBaseModel.m */,
 				F6C9098E1FD67C2B00C8F04C /* HttpServer.h */,
@@ -763,6 +768,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F64F4E2220AD175E0060AD1A /* NetworkState.m in Sources */,
 				F6C909811FD67B2C00C8F04C /* LPUserModel.m in Sources */,
 				F63428882063B89E00E2B9F5 /* NetworkCache.m in Sources */,
 				F6DA141020AADBBC00B194B9 /* LoginViewController.m in Sources */,
@@ -780,7 +786,6 @@
 				F63428952063B8AE00E2B9F5 /* YYMemoryCache.m in Sources */,
 				F6DA141420AAE5ED00B194B9 /* MainNavigationController.m in Sources */,
 				F6C9097B1FD67B2C00C8F04C /* MJAutoFooterTool.m in Sources */,
-				F67109781FD6641300D2C2C2 /* NetWorkStatus.m in Sources */,
 				F6C9097A1FD67B2C00C8F04C /* MJHeadTool.m in Sources */,
 				F6C9098D1FD67C1C00C8F04C /* HttpServer.m in Sources */,
 				F6C909821FD67B2C00C8F04C /* LPTitleModel.m in Sources */,
@@ -791,6 +796,7 @@
 				F6DA140720AADA9C00B194B9 /* HomePageRootViewController.m in Sources */,
 				F6C909911FD6965300C8F04C /* HttpBaseModel.m in Sources */,
 				F6C909A51FD6A79800C8F04C /* NSString+Extension.m in Sources */,
+				F64F4E2520AD30140060AD1A /* NetworkView.m in Sources */,
 				F6407AA020A68CCF0029516D /* DiamondView.m in Sources */,
 				F6C909801FD67B2C00C8F04C /* BaseModel.m in Sources */,
 				F6C909871FD67B2C00C8F04C /* Keyboard.m in Sources */,

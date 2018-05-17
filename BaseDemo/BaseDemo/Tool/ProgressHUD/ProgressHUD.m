@@ -8,12 +8,12 @@
 
 #import "ProgressHUD.h"
 
-#define KbackViewW 100.0f
-#define KbackViewH 100.0f
-#define KImageViewW 100.0f
+#define kBackViewWidth 100.0f
+#define kBackViewHeight 100.0f
+#define kImageViewWidth 100.0f
 
-#define KMainW [UIScreen mainScreen].bounds.size.width
-#define KMainH [UIScreen mainScreen].bounds.size.height
+#define kMainWidth [UIScreen mainScreen].bounds.size.width
+#define kMainHeight [UIScreen mainScreen].bounds.size.height
 
 @interface ProgressHUD ()
 
@@ -24,13 +24,19 @@
 @property (nonatomic, strong) UILabel *kLabel;
 
 @end
+
 @implementation ProgressHUD
 
 + (ProgressHUD *)sharedView{
+    
     static ProgressHUD *sharedView;
+    
     static dispatch_once_t onceToken;
+    
     dispatch_once(&onceToken, ^{
+        
         sharedView = [[ProgressHUD alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        
     });
     return sharedView;
 }
@@ -42,7 +48,9 @@
     return self;
 }
 
-/** 动画消失 */
+/**
+ 动画消失
+ */
 + (void)dismiss{
     [[ProgressHUD sharedView] dismiss];
 }
@@ -54,7 +62,9 @@
     _kWindow = nil;
 }
 
-/** UIActivityIndicatorView转圈动画 */
+/**
+ UIActivityIndicatorView转圈动画
+ */
 + (void)pleaseWait;{
     [[ProgressHUD sharedView]pleaseWait];
 }
@@ -64,7 +74,7 @@
         [self.kWindow makeKeyAndVisible];
         if (!self.superview) [self.kWindow addSubview:self];
         [self.kWindow makeKeyAndVisible];
-        self.kWhirlView.center = CGPointMake(KbackViewW/2, KbackViewH/2);
+        self.kWhirlView.center = CGPointMake(kBackViewWidth/2, kBackViewHeight/2);
         //通过transform来修改显示UIActivityIndicatorView的大小。
         CGAffineTransform transform = CGAffineTransformMakeScale(1.5f,1.5f);
         self.kWhirlView.transform = transform;
@@ -72,7 +82,9 @@
     });
 }
 
-/** UIActivityIndicatorView转圈+文字 正在处理中... */
+/**
+  UIActivityIndicatorView转圈+文字 正在处理中...
+ */
 + (void)progressPopUp:(NSString *)status;{
     [[ProgressHUD sharedView]progressPopUp:status];
 }
@@ -83,7 +95,7 @@
         if (!self.superview) [self.kWindow addSubview:self];
         [self.kWindow makeKeyAndVisible];
         self.kLabel.text = status;
-        self.kWhirlView.center = CGPointMake(KbackViewW/2, KbackViewH/2-10);
+        self.kWhirlView.center = CGPointMake(kBackViewWidth/2, kBackViewHeight/2-10);
         //通过transform来修改显示UIActivityIndicatorView的大小。
         CGAffineTransform transform = CGAffineTransformMakeScale(1.0f,1.0f);
         self.kWhirlView.transform = transform;
@@ -91,7 +103,9 @@
     });
 }
 
-/** UIImageView有关的帧动画 */
+/**
+ UIImageView有关的帧动画
+ */
 +(void)pleaseWaitImageView{
     [[ProgressHUD sharedView]pleaseWaitImageView];
 }
@@ -103,7 +117,9 @@
     });
 }
 
-/** 成功的动画提示 */
+/**
+ 成功的动画提示
+ */
 + (void)showSuccess:(NSString *)status;{
     [[ProgressHUD sharedView]showSuccess:status];
 }
@@ -113,7 +129,7 @@
         [self.kWindow makeKeyAndVisible];
         NSString *bundlePath = [[NSBundle mainBundle] pathForResource: @"ProgressHUD" ofType :@"bundle"];
         NSString *successImgPath= [bundlePath stringByAppendingPathComponent:@"success.png"];
-        self.kImageView.frame = CGRectMake((KbackViewW-30)/2, 20, 30, 30);
+        self.kImageView.frame = CGRectMake((kBackViewWidth-30)/2, 20, 30, 30);
         self.kImageView.image = [UIImage imageWithContentsOfFile:successImgPath];
         [self.backView addSubview:self.kImageView];
         self.kLabel.text = status;
@@ -126,7 +142,9 @@
     });
 }
 
-/** 失败的动画提示 */
+/**
+ 失败的动画提示
+ */
 + (void)showError:(NSString *)status;{
     [[ProgressHUD sharedView]showError:status];
 }
@@ -136,7 +154,7 @@
         [self.kWindow makeKeyAndVisible];
         NSString *bundlePath = [[NSBundle mainBundle] pathForResource: @"ProgressHUD" ofType :@"bundle"];
         NSString *successImgPath= [bundlePath stringByAppendingPathComponent:@"error.png"];
-        self.kImageView.frame = CGRectMake((KbackViewW-30)/2, 20, 30, 30);
+        self.kImageView.frame = CGRectMake((kBackViewWidth-30)/2, 20, 30, 30);
         self.kImageView.image = [UIImage imageWithContentsOfFile:successImgPath];
         [self.backView addSubview:self.kImageView];
         self.kLabel.text = status;
@@ -149,7 +167,9 @@
     });
 }
 
-/** 文字提示 */
+/**
+ 文字提示
+ */
 + (void)showMessage:(NSString *)message{
     [[ProgressHUD sharedView]showMessage:message];
 }
@@ -158,11 +178,11 @@
         if (!self.superview) [self.kWindow addSubview:self];
         [self.kWindow makeKeyAndVisible];
         self.kLabel.text = message;
-        CGFloat backW = [self getSizeWithString:message withFont:[UIFont systemFontOfSize:15] withWidth:300.0f].width;
-        CGFloat backH = [self getSizeWithString:message withFont:[UIFont systemFontOfSize:15] withWidth:300.0f].height;
-        self.kLabel.frame = CGRectMake(0, 0,backW , backH);
-        self.kLabel.center = CGPointMake((backW+50)/2, 25);
-        self.backView.frame = CGRectMake((KMainW-backW-50)/2, (KMainH-backH)/2-50, backW+50,50);
+        CGFloat backWidth = [self getSizeWithString:message withFont:[UIFont systemFontOfSize:15] withWidth:300.0f].width;
+        CGFloat backHeight = [self getSizeWithString:message withFont:[UIFont systemFontOfSize:15] withWidth:300.0f].height;
+        self.kLabel.frame = CGRectMake(0, 0,backWidth , backHeight + 20);
+        self.kLabel.center = CGPointMake((backWidth+50)/2, 25);
+        self.backView.frame = CGRectMake((kMainWidth-backWidth-50)/2, (kMainHeight-backHeight)/2-50, backWidth+50,50);
         self.backView.alpha = 1.0f;
         [UIView animateWithDuration:1.5f animations:^{
             self.backView.alpha = 0.0f;
@@ -199,18 +219,24 @@
                                         context:nil].size;
     }
 }
-/** Window界面*/
+
+/**
+ Window界面
+ */
 - (UIWindow *)kWindow{
     if (!_kWindow) {
         _kWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     }
     return _kWindow;
 }
-/** 文字*/
+
+/**
+ 文字
+ */
 - (UILabel *)kLabel
 {
     if (!_kLabel) {
-        _kLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, KbackViewH-35, KbackViewW, 30)];
+        _kLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, kBackViewHeight - 35, kBackViewWidth, 30)];
         _kLabel.textColor = [UIColor whiteColor];
         _kLabel.textAlignment = NSTextAlignmentCenter;
         _kLabel.font = [UIFont boldSystemFontOfSize:15.0f];
@@ -219,10 +245,13 @@
     }
     return _kLabel;
 }
-/** 背景视图懒加载处理*/
+
+/**
+ 背景视图懒加载处理
+ */
 - (UIView *)backView{
     if (_backView == nil) {
-        _backView = [[UIView alloc] initWithFrame:CGRectMake((KMainW-KbackViewW)/2,(KMainH-KbackViewH)/2-50, KbackViewW, KbackViewH)];
+        _backView = [[UIView alloc] initWithFrame:CGRectMake((kMainWidth - kBackViewWidth)/2,(kMainHeight - kBackViewHeight)/2-50, kBackViewWidth, kBackViewHeight)];
         _backView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8f];
         _backView.layer.cornerRadius = 10.f;
         _backView.layer.masksToBounds = YES;
@@ -230,10 +259,13 @@
     }
     return _backView;
 }
-/** UIImageView懒加载处理*/
+
+/**
+ UIImageView懒加载处理
+ */
 - (UIImageView *)kImageView{
     if (_kImageView == nil) {
-        _kImageView = [[UIImageView alloc] initWithFrame:CGRectMake((KMainW-KImageViewW)/2,(KMainH-KImageViewW)/2-20, KImageViewW, KImageViewW)];
+        _kImageView = [[UIImageView alloc] initWithFrame:CGRectMake((kMainWidth - kImageViewWidth)/2,(kMainHeight - kImageViewWidth)/2-20, kImageViewWidth, kImageViewWidth)];
         NSMutableArray *array = [NSMutableArray array];
         for (int i = 0; i < 11 ; i++) {
             NSString *imageName = [NSString stringWithFormat:@"gifs_%d", i];
@@ -246,7 +278,10 @@
     }
     return _kImageView;
 }
-/** UIImageView懒加载处理*/
+
+/**
+ UIImageView懒加载处理
+ */
 -(UIActivityIndicatorView *)kWhirlView{
     if (_kWhirlView == nil) {
         _kWhirlView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -254,4 +289,5 @@
     }
     return _kWhirlView;
 }
+
 @end

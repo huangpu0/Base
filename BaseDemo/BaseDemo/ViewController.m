@@ -190,12 +190,12 @@
 #pragma mark -->> 导航条左按钮返回触发的方法
 -(void)touchLeftBtn{
     //在子类中实现
+     [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma MARK -->> 导航条右侧按钮触发的方法
 -(void)touchRightBtn{
     //在子类中实现
-     [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma MARK -->> 导航条紧挨最右侧右按钮触发的方法
@@ -204,7 +204,7 @@
 }
 
 /**
- 屏幕竖屏设置相关处理
+ 屏幕竖屏等设置相关处理
  */
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations{
     return UIInterfaceOrientationMaskPortrait;

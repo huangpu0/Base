@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainRootTabBarController.h"
-#import "NetWorkStatus.h"
+#import "NetworkState.h"
 #import "Reachability.h"
 @interface AppDelegate ()
 @end
@@ -21,7 +21,7 @@
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor clearColor];
     self.window.rootViewController = [[MainRootTabBarController alloc]init];
-    [NetWorkStatus startMonitoring];
+    [NetworkState startMonitoringNetworkStatus];
 //苹果官方的网络状态检测
 //  Reachability *reach = [Reachability reachabilityWithHostName:@"https://www.baidu.com"];
 //  NetworkStatus status = [reach currentReachabilityStatus];

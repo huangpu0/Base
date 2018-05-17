@@ -10,6 +10,7 @@
 typedef void(^KeyBlock)(NSInteger height);
 
 @interface Keyboard : NSObject
+
 /*
     移除监察者,控制器跳转的时候调用一下就行,也可不用调用
  */
@@ -24,4 +25,5 @@ typedef void(^KeyBlock)(NSInteger height);
  *  @param dismissBackBlock 键盘 消失的回调block,带动画效果
  */
 +(void)KeyAddMonitorWithShowBack:(KeyBlock)showBackBlock andDismissBlock:(KeyBlock)dismissBackBlock;
+
 @end
