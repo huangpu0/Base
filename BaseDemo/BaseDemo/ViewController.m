@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
+#import "NetworkView.h"
+@interface ViewController ()<NetworkViewDelegate>
 
 @end
 
@@ -201,6 +201,24 @@
 #pragma MARK -->> 导航条紧挨最右侧右按钮触发的方法
 -(void)touchOtherRightBtn;{
     //在子类中实现
+}
+
+/**
+ 获取当前APP网络状态自动刷新数据,刷新当前页面,返回上一页
+ */
+- (NetworkView *)netView{
+    if (!_netView) {
+        _netView = [[NetworkView alloc]initWithFrame:CGRectMake(0, kNavHeight, kScreen_Width, kScreen_Height)];
+        _netView.delegate = self;
+        [self.view addSubview:_netView];
+    }
+    return _netView;
+}
+- (void)refreshViewUI:(UIButton *)btn{
+    //在子类中实现 刷新当前页面
+}
+- (void)backLeftTouch:(UIButton *)btn{
+    //在子类中实现 返回上一级按钮
 }
 
 /**

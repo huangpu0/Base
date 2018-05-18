@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class NetworkView;
 
 @interface ViewController : UIViewController
 
@@ -71,6 +72,18 @@
 
 // 导航条紧挨最右侧右按钮触发的方法
 -(void)touchOtherRightBtn;
+
+/**
+ 获取当前APP网络状态自动刷新数据,刷新当前页面,返回上一页
+ */
+
+@property(strong, nonatomic) NetworkView *netView;
+
+- (void)getNetDataState:(NSNotification *)notice;
+
+- (void)refreshViewUI:(UIButton *)btn;
+
+- (void)backLeftTouch:(UIButton *)btn;
 
 
 @end
