@@ -10,17 +10,17 @@
 
 /**
    网络状态相关描述
- - NetStateError: 网络引起的错误
- - NetStateLoading: 网络加载状态
- - NetStateSuccess: 网络状态完好
- - NetStateDataError: 网络数据引起的错误
+ - NetworkStatusError: 网络引起的错误
+ - NetworkStatusLoading: 网络加载状态
+ - NetworkStatusSuccess: 网络状态完好
+ - NetworkStatusDataError: 网络数据引起的错误
  */
 
-typedef NS_ENUM(NSInteger, NetState) {
-    NetStateError = 0,
-    NetStateLoading = 1,
-    NetStateSuccess = 2,
-    NetStateDataError = 3,
+typedef NS_ENUM(NSInteger, NetworkStatus) {
+    NetworkStatusError = 0,
+    NetworkStatusLoading = 1,
+    NetworkStatusSuccess = 2,
+    NetworkStatusDataError = 3,
 };
 
 @protocol NetworkViewDelegate <NSObject>
@@ -40,7 +40,7 @@ typedef NS_ENUM(NSInteger, NetState) {
 
 @property (nonatomic, weak) id<NetworkViewDelegate>delegate;
 
-@property (nonatomic, assign) NetState state;
+@property (nonatomic, assign) NetworkStatus status;
 
 
 @end

@@ -69,7 +69,7 @@
                                              blue:((float)(rgbValue & 0xFF))/255.0 \
                                             alpha:1.0]
 //网络状态
-#define kNetState    @"NetState"
+#define kNetworkStatus    @"NetworkStatus"
 
 //通知中心
 #define NotificationCenter [NSNotificationCenter defaultCenter]

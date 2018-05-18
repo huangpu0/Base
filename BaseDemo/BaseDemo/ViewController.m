@@ -33,6 +33,16 @@
     
 }
 
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    
+    //添加当前网络状态检测通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getNetworkStatus:) name:kNetworkStatus object:nil];
+}
+
+/**
+ 导航栏 -- >> 相关设置
+ */
 -(void)setNavigationBar{
     self.navigationController.navigationBar.translucent= NO;
     self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
@@ -214,9 +224,21 @@
     }
     return _netView;
 }
+
+/**
+ 获取当前APP网络状态的通知
+ */
+- (void)getNetworkStatus:(NSNotification *)notice{
+    
+    NSLog(@"当前网络状态～～ >> %@ ～～",notice.userInfo[@"NetworkStatus"]);
+}
+
+#pragma MARK -->> 无网状态切换有网状态刷新页面
 - (void)refreshViewUI:(UIButton *)btn{
     //在子类中实现 刷新当前页面
 }
+
+#pragma MARK -->> 网络错误/数据错误 按钮返回上一级界面
 - (void)backLeftTouch:(UIButton *)btn{
     //在子类中实现 返回上一级按钮
 }
@@ -232,6 +254,13 @@
 }
 -(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
     return UIInterfaceOrientationPortrait;
+}
+
+/**
+  移除网络状态检测通知
+ */
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter ]removeObserver:self name:kNetworkStatus object:nil];
 }
 
 @end

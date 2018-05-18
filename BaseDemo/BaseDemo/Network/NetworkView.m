@@ -124,29 +124,29 @@
     
 }
 #pragma amrk -- 相关网络状态的处理
-- (void)setState:(NetState)state{
+- (void)setState:(NetworkStatus)status{
     
-    _state = state;
+    _status = status;
     self.hidden = NO;
     
-    switch (state) {
-        case NetStateError:{
+    switch (status) {
+        case NetworkStatusError:{
             [ProgressHUD dismiss];
             [self.errorView removeFromSuperview];
             [self addSubview:self.badView];
         } break;
-        case NetStateLoading:{
+        case NetworkStatusLoading:{
             [self.badView removeFromSuperview];
             [self.errorView removeFromSuperview];
             [self setUpLodingView];
         } break;
-        case NetStateSuccess:{
+        case NetworkStatusSuccess:{
             [self.badView removeFromSuperview];
             [self.errorView removeFromSuperview];
             [ProgressHUD dismiss];
             self.hidden = YES;
         } break;
-        case NetStateDataError:{
+        case NetworkStatusDataError:{
             [ProgressHUD dismiss];
             [self.badView removeFromSuperview];
             [self addSubview:self.errorView];

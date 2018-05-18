@@ -79,7 +79,7 @@
 
 @property(strong, nonatomic) NetworkView *netView;
 
-- (void)getNetDataState:(NSNotification *)notice;
+- (void)getNetworkStatus:(NSNotification *)notice;
 
 - (void)refreshViewUI:(UIButton *)btn;
 
