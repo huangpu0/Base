@@ -52,9 +52,9 @@
         case 2:
             //客机
         {
-            PlaneView *plane = [PlaneView loadPlaneViewWithPoint:CGPointMake(Screen_Width + 232, 0)];
+            PlaneView *plane = [PlaneView loadPlaneViewWithPoint:CGPointMake(kScreen_Width + 232, 0)];
             
-            [plane addAnimationsMoveToPoint:CGPointMake(Screen_Width, 100) endPoint:CGPointMake(-500, 410)];
+            [plane addAnimationsMoveToPoint:CGPointMake(kScreen_Width, 100) endPoint:CGPointMake(-500, 410)];
             [self.view addSubview:plane];
             
         }
@@ -62,8 +62,8 @@
         case 3:
             //火箭
         {
-            RocketView *rocket = [RocketView loadRocketViewWithPoint:CGPointMake(Screen_Width/2, Screen_Height + 150)];
-            [rocket addAnimationsMoveToPoint:CGPointMake(self.view.centerX + 20, Screen_Height + 150) endPoint:CGPointMake(self.view.centerX + 20, -150)];
+            RocketView *rocket = [RocketView loadRocketViewWithPoint:CGPointMake(kScreen_Width/2, kScreen_Height + 150)];
+            [rocket addAnimationsMoveToPoint:CGPointMake(self.view.centerX + 20, kScreen_Height + 150) endPoint:CGPointMake(self.view.centerX + 20, -150)];
             [self.view addSubview:rocket];
             
         }

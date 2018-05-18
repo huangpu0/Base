@@ -36,7 +36,7 @@
     NSArray *array = [NSArray arrayWithObjects:@"烟花动画",@"跑车动画",@"飞机动画",@"刷火箭",@"钻石动画", nil];
     [self.dataArray addObjectsFromArray:array];
     
-    self.tabView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0,Screen_Width, Screen_Height) style:UITableViewStylePlain];
+    self.tabView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0,kScreen_Width, kScreen_Height) style:UITableViewStylePlain];
     self.tabView.dataSource = self;
     self.tabView.delegate = self;
     self.tabView.tableFooterView = [UIView new];

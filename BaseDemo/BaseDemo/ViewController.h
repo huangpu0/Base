@@ -10,16 +10,19 @@
 
 @interface ViewController : UIViewController
 
+/**
+  是否隐藏导航栏 默认 NO
+ */
 @property BOOL currentViewNavigationBarHidden;
 
 /**
-  导航条格式：---title---返回按钮(自定义(图片))--右按钮(自定义(图片)
+  导航栏 -- >> 相关设置
  */
 -(void)setNavigationBar;
 
 
 /**
-   导航栏   显示文字
+   导航栏 -- >> 显示文字
  @param title 导航栏显示文字
  */
 -(void)setNavigationWithTitle:(NSString *)title;

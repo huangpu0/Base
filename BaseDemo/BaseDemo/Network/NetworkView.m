@@ -33,29 +33,29 @@
 - (UIView *)badView{
     if (!_badView) {
         _badView = [[UIView alloc]init];
-        _badView.frame = CGRectMake(0, 180, Screen_Width, 200);
+        _badView.frame = CGRectMake(0, 180, kScreen_Width, 200);
         
         UIImageView *badImage = [[UIImageView alloc]init];
         badImage.image = [UIImage imageNamed:@"net_def"];
-        badImage.frame = CGRectMake(Screen_Width/2 - 44, 0, 87,87 );
+        badImage.frame = CGRectMake(kScreen_Width/2 - 44, 0, 87,87 );
         [_badView addSubview:badImage];
         
         UILabel *desLab = [[UILabel alloc]init];
-        desLab.frame = CGRectMake(125, 105, Screen_Width - 250, 30);
+        desLab.frame = CGRectMake(125, 105, kScreen_Width - 250, 30);
         desLab.text = @"网络出了点问题";
-        desLab.textColor = RGBOF(0xaaaaaa);
+        desLab.textColor = RGBOFColor(0xaaaaaa);
         desLab.textAlignment = NSTextAlignmentCenter;
         desLab.font = [UIFont systemFontOfSize:12.0f];
         [_badView addSubview:desLab];
         
         UIButton *refreBtn = [[UIButton alloc]init];
-        refreBtn.frame = CGRectMake(125, desLab.y + 50, Screen_Width - 250, 35);
+        refreBtn.frame = CGRectMake(125, desLab.y + 50, kScreen_Width - 250, 35);
         refreBtn.layer.cornerRadius =17.50f;
         refreBtn.layer.borderWidth = 1;
-        refreBtn.layer.borderColor = RGBOF(0xaaaaaa).CGColor;
+        refreBtn.layer.borderColor = RGBOFColor(0xaaaaaa).CGColor;
         refreBtn.layer.masksToBounds = YES;
         [refreBtn setTitle:@"刷新看看" forState:UIControlStateNormal];
-        [refreBtn setTitleColor:RGBOF(0x000000) forState:UIControlStateNormal];
+        [refreBtn setTitleColor:RGBOFColor(0x000000) forState:UIControlStateNormal];
         [refreBtn addTarget:self action:@selector(refreshUI:) forControlEvents:UIControlEventTouchUpInside];
         [_badView addSubview:refreBtn];
         
@@ -66,40 +66,40 @@
 - (UIView *)errorView{
     if (!_errorView) {
         _errorView = [[UIView alloc]init];
-        _errorView.frame = CGRectMake(0, 180, Screen_Width, 200);
+        _errorView.frame = CGRectMake(0, 180, kScreen_Width, 200);
         
         UIImageView *badImage = [[UIImageView alloc]init];
         badImage.image = [UIImage imageNamed:@"data_def"];
-        badImage.frame = CGRectMake(Screen_Width/2 - 44, 0, 87,87 );
+        badImage.frame = CGRectMake(kScreen_Width/2 - 44, 0, 87,87 );
         [_errorView addSubview:badImage];
         
         UILabel *desLab = [[UILabel alloc]init];
-        desLab.frame = CGRectMake(125, 105, Screen_Width - 250, 30);
+        desLab.frame = CGRectMake(125, 105, kScreen_Width - 250, 30);
         desLab.text = @"糟糕,数据出问题了!";
-        desLab.textColor = RGBOF(0xaaaaaa);
+        desLab.textColor = RGBOFColor(0xaaaaaa);
         desLab.textAlignment = NSTextAlignmentCenter;
         desLab.font = [UIFont systemFontOfSize:12.0f];
         [_errorView addSubview:desLab];
         
         UIButton *backBtn = [[UIButton alloc]init];
-        backBtn.frame = CGRectMake(58, desLab.y + 50, Screen_Width/2 - 68, 35);
+        backBtn.frame = CGRectMake(58, desLab.y + 50, kScreen_Width/2 - 68, 35);
         backBtn.layer.cornerRadius = 17.50f;
         backBtn.layer.borderWidth = 1;
-        backBtn.layer.borderColor = RGBOF(0xaaaaaa).CGColor;
+        backBtn.layer.borderColor = RGBOFColor(0xaaaaaa).CGColor;
         backBtn.layer.masksToBounds = YES;
         [backBtn setTitle:@"返回" forState:UIControlStateNormal];
-        [backBtn setTitleColor:RGBOF(0x000000) forState:UIControlStateNormal];
+        [backBtn setTitleColor:RGBOFColor(0x000000) forState:UIControlStateNormal];
         [backBtn addTarget:self action:@selector(backLeft:) forControlEvents:UIControlEventTouchUpInside];
         [_errorView addSubview:backBtn];
         
         UIButton *refreBtn = [[UIButton alloc]init];
-        refreBtn.frame = CGRectMake(Screen_Width/2 + 10 , desLab.y + 50, Screen_Width/2 - 68, 35);
+        refreBtn.frame = CGRectMake(kScreen_Width/2 + 10 , desLab.y + 50, kScreen_Width/2 - 68, 35);
         refreBtn.layer.cornerRadius = 17.50f;
         refreBtn.layer.borderWidth = 1;
-        refreBtn.layer.borderColor = RGBOF(0xaaaaaa).CGColor;
+        refreBtn.layer.borderColor = RGBOFColor(0xaaaaaa).CGColor;
         refreBtn.layer.masksToBounds = YES;
         [refreBtn setTitle:@"刷新看看" forState:UIControlStateNormal];
-        [refreBtn setTitleColor:RGBOF(0x000000) forState:UIControlStateNormal];
+        [refreBtn setTitleColor:RGBOFColor(0x000000) forState:UIControlStateNormal];
         [refreBtn addTarget:self action:@selector(refreshUI:) forControlEvents:UIControlEventTouchUpInside];
         [_errorView addSubview:refreBtn];
         

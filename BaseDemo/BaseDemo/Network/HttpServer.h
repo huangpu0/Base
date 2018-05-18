@@ -12,10 +12,13 @@
 
 //请求成功的时候的block
 typedef void (^HttpRequestSuccess)  (id response);
+
 //请求失败的时候的block
 typedef void (^HttpRequestFailed)  (NSError *error);
+
 //请求数据进度的block Progress.completedUnitCount:当前大小 - Progress.totalUnitCount:总大小
 typedef void (^HttpRequestProgress)  (NSProgress *progress);
+
 //请求数据缓存回调的block
 typedef void (^HttpRequestCache)  (id responseCache);
 

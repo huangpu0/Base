@@ -34,7 +34,7 @@
 {
     [super placeSubviews];
     self.label.frame = self.bounds;
-    self.loading.center = CGPointMake(Screen_Width *0.2, self.mj_h *0.5);
+    self.loading.center = CGPointMake(kScreen_Width *0.2, self.mj_h *0.5);
 }
 #pragma mark 在这里监听控件的刷新状态
 -(void)setState:(MJRefreshState)state

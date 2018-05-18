@@ -16,7 +16,7 @@
 
 -(instancetype)init{
     self = [super init];
-    _currentViewNavigationBarHidden=NO;
+    _currentViewNavigationBarHidden = NO;
     return self;
 }
 

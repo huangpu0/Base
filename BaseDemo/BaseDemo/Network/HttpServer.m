@@ -14,17 +14,25 @@ static AFHTTPSessionManager *manager;
 @implementation HttpServer
 
 + (instancetype)sharedClient {
+    
     static HttpServer *server = nil;
+    
     static dispatch_once_t onceToken;
+    
     dispatch_once(&onceToken, ^{
+        
         manager = [AFHTTPSessionManager manager];
+        
         manager.requestSerializer.timeoutInterval = 10;
         //发送json数据
         manager.requestSerializer = [AFJSONRequestSerializer serializer];
         //响应json数据
         manager.responseSerializer  = [AFJSONResponseSerializer serializer];
+        
         manager.responseSerializer.acceptableContentTypes =[NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", @"text/plain",@"application/atom+xml",@"application/xml",@"text/xml",nil];
+        
         server = [[self alloc]init];
+        
     });
     return server;
 }
@@ -46,12 +54,13 @@ static AFHTTPSessionManager *manager;
     //    [parameter setValue:@"GetResult" forKey:@"Type"];
     //    [parameter setValue:[dic dictionaryToJson] forKey:@"QueryData"];
     //    URL: http://caiyiquan.082818.com/api/Client/ApiHandle.ashx?FunctionName=GetTalkGroupRecomList&QueryData=%7B%22UserID%22%3A%224827%22%7D&Type=GetResult
+    
     [manager GET:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"请求数据--%@",responseObject);
+        NSLog(@"请求数据-- >> %@",responseObject);
         successBlock(responseObject);
         //successBlock(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"请求失败--%@",error);
+        NSLog(@"请求失败-- >> %@",error);
         failureBlock(error);
     }];
 }
@@ -83,11 +92,11 @@ static AFHTTPSessionManager *manager;
         //对数据进行异步缓存
         cacheBlock !=nil ? [NetworkCache setHttpCache:responseObject URL:url parameters:parameters] : nil;
         
-        NSLog(@"请求数据--%@",responseObject);
+        NSLog(@"请求数据-- >> %@",responseObject);
         successBlock(responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"请求失败--%@",error);
+        NSLog(@"请求失败-- >> %@",error);
         failureBlock(error);
     }];
     
@@ -106,10 +115,10 @@ static AFHTTPSessionManager *manager;
 - (void)requestPostMethodWithURL:(NSString *)url withParameters:(id )parameters withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
     [manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"请求数据--%@",responseObject);
+        NSLog(@"请求数据-- >> %@",responseObject);
         successBlock(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"请求失败--%@",error);
+        NSLog(@"请求失败-- >> %@",error);
         failureBlock(error);
     }];
 }
@@ -132,11 +141,11 @@ static AFHTTPSessionManager *manager;
         //对数据进行异步缓存
         cacheBlock !=nil ? [NetworkCache setHttpCache:responseObject URL:url parameters:parameters] : nil;
         
-        NSLog(@"请求数据--%@",responseObject);
+        NSLog(@"请求数据-- >> %@",responseObject);
         successBlock(responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"请求失败--%@",error);
+        NSLog(@"请求失败-- >> %@",error);
         failureBlock(error);
     }];
 }
@@ -165,10 +174,10 @@ static AFHTTPSessionManager *manager;
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"请求数据--%@",responseObject);
+        NSLog(@"请求数据-- >> %@",responseObject);
         successBlock(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"请求失败--%@",error);
+        NSLog(@"请求失败-- >> %@",error);
         failureBlock(error);
     }];
 }
@@ -199,10 +208,10 @@ static AFHTTPSessionManager *manager;
         } progress:^(NSProgress * _Nonnull uploadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            NSLog(@"请求数据--%@",responseObject);
+            NSLog(@"请求数据-- >> %@",responseObject);
             successBlock(responseObject);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            NSLog(@"请求失败--%@",error);
+            NSLog(@"请求失败-- >> %@",error);
             failureBlock(error);
         }];
     }
@@ -229,7 +238,7 @@ static AFHTTPSessionManager *manager;
         dispatch_async(dispatch_get_main_queue(), ^{
             progressBlock ? progressBlock(downloadProgress) : nil;
         });
-        NSLog(@"下载进度:==%.2f",100.0*downloadProgress.completedUnitCount/downloadProgress.totalUnitCount);
+        NSLog(@"下载进度:== >> %.2f",100.0*downloadProgress.completedUnitCount/downloadProgress.totalUnitCount);
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
         //返回文件位置的URL路径
         return [NSURL fileURLWithPath:[FilesManager createDirectory:dirName withFilePath:response.suggestedFilename]];

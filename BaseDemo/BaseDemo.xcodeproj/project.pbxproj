@@ -136,7 +136,6 @@
 		F69F00CD2068E33700E23E34 /* FilesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilesManager.h; sourceTree = "<group>"; };
 		F69F00CE2068E33700E23E34 /* FilesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilesManager.m; sourceTree = "<group>"; };
 		F6C909501FD6763100C8F04C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
-		F6C909511FD678E900C8F04C /* ApiParameterList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiParameterList.h; sourceTree = "<group>"; };
 		F6C909541FD67B2C00C8F04C /* MJHeadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJHeadTool.m; sourceTree = "<group>"; };
 		F6C909551FD67B2C00C8F04C /* MJAutoFooterTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJAutoFooterTool.m; sourceTree = "<group>"; };
 		F6C909561FD67B2C00C8F04C /* MJHeadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJHeadTool.h; sourceTree = "<group>"; };
@@ -167,6 +166,7 @@
 		F6C9099C1FD6A23700C8F04C /* DateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormat.h; sourceTree = "<group>"; };
 		F6C909A31FD6A79800C8F04C /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		F6C909A41FD6A79800C8F04C /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		F6D6A23420AEAE660062CA3B /* InterfaceParameterList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceParameterList.h; sourceTree = "<group>"; };
 		F6DA13EF20AACF2300B194B9 /* MainRootTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainRootTabBarController.h; sourceTree = "<group>"; };
 		F6DA13F020AACF2300B194B9 /* MainRootTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainRootTabBarController.m; sourceTree = "<group>"; };
 		F6DA140220AADA7D00B194B9 /* ExploreRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExploreRootViewController.h; sourceTree = "<group>"; };
@@ -320,7 +320,7 @@
 				F67109381FD656C000D2C2C2 /* Main.storyboard */,
 				F671093B1FD656C000D2C2C2 /* Assets.xcassets */,
 				F6C909501FD6763100C8F04C /* PrefixHeader.pch */,
-				F6C909511FD678E900C8F04C /* ApiParameterList.h */,
+				F6D6A23420AEAE660062CA3B /* InterfaceParameterList.h */,
 				F671093D1FD656C000D2C2C2 /* LaunchScreen.storyboard */,
 				F67109401FD656C000D2C2C2 /* Info.plist */,
 				F67109411FD656C000D2C2C2 /* main.m */,
