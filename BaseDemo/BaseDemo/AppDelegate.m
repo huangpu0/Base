@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "MainRootTabBarController.h"
 #import "NetworkStatus.h"
-#import "Reachability.h"
+
 @interface AppDelegate ()
 @end
 
@@ -18,18 +18,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor clearColor];
     self.window.rootViewController = [[MainRootTabBarController alloc]init];
-    [NetworkState startMonitoringNetworkStatus];
+    
+    //全局检测APP网络状态
+    [NetworkStatus startMonitoringNetworkStatus];
+
+    [self.window makeKeyWindow];
+    return YES;
+}
 //苹果官方的网络状态检测
+//- (void)setAppleNetworkStatus{
 //  Reachability *reach = [Reachability reachabilityWithHostName:@"https://www.baidu.com"];
 //  NetworkStatus status = [reach currentReachabilityStatus];
 //  UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:[self strFromStatus:status] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
 //  [alertView show];
-    [self.window makeKeyWindow];
-    return YES;
-}
+//}
 ////苹果官方的网络状态检测
 //-(NSString *)strFromStatus:(NetworkStatus)status
 //{
@@ -50,6 +56,7 @@
 //    }
 //    return string;
 //}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

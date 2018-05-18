@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AFHTTPSessionManager.h"
 
-@interface NetworkState : AFHTTPSessionManager
+@interface NetworkStatus : AFHTTPSessionManager
 
 /**
  全局检测app网络状态

@@ -6,21 +6,21 @@
 //  Copyright © 2018年 朴子hp. All rights reserved.
 //
 
-#import "NetworkState.h"
+#import "NetworkStatus.h"
 
 static NSString * const AppNetBaseURL = @"https://www.baidu.com";
 
-@implementation NetworkState
+@implementation NetworkStatus
 
 +(instancetype)startMonitoringNetworkStatus
 {
-    static NetworkState *netState = nil;
+    static NetworkStatus *netState = nil;
     
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
         
-        netState = [[NetworkState alloc]initWithBaseURL:[NSURL URLWithString:AppNetBaseURL]];
+        netState = [[NetworkStatus alloc]initWithBaseURL:[NSURL URLWithString:AppNetBaseURL]];
         
         AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
         [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
