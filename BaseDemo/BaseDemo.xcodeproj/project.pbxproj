@@ -25,7 +25,6 @@
 		F6407A9B20A68AA20029516D /* RocketView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6407A9A20A68AA20029516D /* RocketView.m */; };
 		F6407A9D20A68AB60029516D /* RocketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6407A9C20A68AB60029516D /* RocketView.xib */; };
 		F6407AA020A68CCF0029516D /* DiamondView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6407A9F20A68CCF0029516D /* DiamondView.m */; };
-		F64F4E2220AD175E0060AD1A /* NetworkState.m in Sources */ = {isa = PBXBuildFile; fileRef = F64F4E2120AD175E0060AD1A /* NetworkState.m */; };
 		F64F4E2520AD30140060AD1A /* NetworkView.m in Sources */ = {isa = PBXBuildFile; fileRef = F64F4E2420AD30140060AD1A /* NetworkView.m */; };
 		F67109341FD656C000D2C2C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109331FD656C000D2C2C2 /* AppDelegate.m */; };
 		F67109371FD656C000D2C2C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F67109361FD656C000D2C2C2 /* ViewController.m */; };
@@ -51,6 +50,7 @@
 		F6C909991FD6A10700C8F04C /* CallWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C909981FD6A10700C8F04C /* CallWebView.m */; };
 		F6C9099D1FD6A23700C8F04C /* DateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C9099B1FD6A23700C8F04C /* DateFormat.m */; };
 		F6C909A51FD6A79800C8F04C /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C909A41FD6A79800C8F04C /* NSString+Extension.m */; };
+		F6D6A23720AECB520062CA3B /* NetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D6A23620AECB520062CA3B /* NetworkStatus.m */; };
 		F6DA13F220AACF2300B194B9 /* MainRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DA13F020AACF2300B194B9 /* MainRootTabBarController.m */; };
 		F6DA140420AADA7D00B194B9 /* ExploreRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DA140320AADA7D00B194B9 /* ExploreRootViewController.m */; };
 		F6DA140720AADA9C00B194B9 /* HomePageRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DA140620AADA9C00B194B9 /* HomePageRootViewController.m */; };
@@ -113,8 +113,6 @@
 		F6407A9C20A68AB60029516D /* RocketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketView.xib; sourceTree = "<group>"; };
 		F6407A9E20A68CCF0029516D /* DiamondView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiamondView.h; sourceTree = "<group>"; };
 		F6407A9F20A68CCF0029516D /* DiamondView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiamondView.m; sourceTree = "<group>"; };
-		F64F4E2020AD175E0060AD1A /* NetworkState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkState.h; sourceTree = "<group>"; };
-		F64F4E2120AD175E0060AD1A /* NetworkState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkState.m; sourceTree = "<group>"; };
 		F64F4E2320AD30080060AD1A /* NetworkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkView.h; sourceTree = "<group>"; };
 		F64F4E2420AD30140060AD1A /* NetworkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkView.m; sourceTree = "<group>"; };
 		F671092F1FD656C000D2C2C2 /* BaseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +165,8 @@
 		F6C909A31FD6A79800C8F04C /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		F6C909A41FD6A79800C8F04C /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		F6D6A23420AEAE660062CA3B /* InterfaceParameterList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceParameterList.h; sourceTree = "<group>"; };
+		F6D6A23520AECB480062CA3B /* NetworkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkStatus.h; sourceTree = "<group>"; };
+		F6D6A23620AECB520062CA3B /* NetworkStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkStatus.m; sourceTree = "<group>"; };
 		F6DA13EF20AACF2300B194B9 /* MainRootTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainRootTabBarController.h; sourceTree = "<group>"; };
 		F6DA13F020AACF2300B194B9 /* MainRootTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainRootTabBarController.m; sourceTree = "<group>"; };
 		F6DA140220AADA7D00B194B9 /* ExploreRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExploreRootViewController.h; sourceTree = "<group>"; };
@@ -365,8 +365,8 @@
 			children = (
 				F6C909891FD67C0800C8F04C /* Reachability.h */,
 				F6C9098A1FD67C1300C8F04C /* Reachability.m */,
-				F64F4E2020AD175E0060AD1A /* NetworkState.h */,
-				F64F4E2120AD175E0060AD1A /* NetworkState.m */,
+				F6D6A23520AECB480062CA3B /* NetworkStatus.h */,
+				F6D6A23620AECB520062CA3B /* NetworkStatus.m */,
 				F64F4E2320AD30080060AD1A /* NetworkView.h */,
 				F64F4E2420AD30140060AD1A /* NetworkView.m */,
 				F6C9098F1FD6965300C8F04C /* HttpBaseModel.h */,
@@ -768,7 +768,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F64F4E2220AD175E0060AD1A /* NetworkState.m in Sources */,
 				F6C909811FD67B2C00C8F04C /* LPUserModel.m in Sources */,
 				F63428882063B89E00E2B9F5 /* NetworkCache.m in Sources */,
 				F6DA141020AADBBC00B194B9 /* LoginViewController.m in Sources */,
@@ -786,6 +785,7 @@
 				F63428952063B8AE00E2B9F5 /* YYMemoryCache.m in Sources */,
 				F6DA141420AAE5ED00B194B9 /* MainNavigationController.m in Sources */,
 				F6C9097B1FD67B2C00C8F04C /* MJAutoFooterTool.m in Sources */,
+				F6D6A23720AECB520062CA3B /* NetworkStatus.m in Sources */,
 				F6C9097A1FD67B2C00C8F04C /* MJHeadTool.m in Sources */,
 				F6C9098D1FD67C1C00C8F04C /* HttpServer.m in Sources */,
 				F6C909821FD67B2C00C8F04C /* LPTitleModel.m in Sources */,

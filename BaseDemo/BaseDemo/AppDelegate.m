@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainRootTabBarController.h"
-#import "NetworkState.h"
+#import "NetworkStatus.h"
 #import "Reachability.h"
 @interface AppDelegate ()
 @end
@@ -30,26 +30,26 @@
     [self.window makeKeyWindow];
     return YES;
 }
-//苹果官方的网络状态检测
--(NSString *)strFromStatus:(NetworkStatus)status
-{
-    NSString * string;
-    switch (status) {
-        case NotReachable:
-            string = @"Not Reachable";
-            break;
-        case ReachableViaWiFi:
-            string = @"WiFi";
-            break;
-        case ReachableViaWWAN:
-            string = @"WWAN";
-            break;
-        default:
-            string = @"....";
-            break;
-    }
-    return string;
-}
+////苹果官方的网络状态检测
+//-(NSString *)strFromStatus:(NetworkStatus)status
+//{
+//    NSString * string;
+//    switch (status) {
+//        case NotReachable:
+//            string = @"Not Reachable";
+//            break;
+//        case ReachableViaWiFi:
+//            string = @"WiFi";
+//            break;
+//        case ReachableViaWWAN:
+//            string = @"WWAN";
+//            break;
+//        default:
+//            string = @"....";
+//            break;
+//    }
+//    return string;
+//}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
