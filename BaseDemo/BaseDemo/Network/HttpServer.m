@@ -226,10 +226,10 @@ static AFHTTPSessionManager *manager;
  @param successBlock 成功的回调 block
  @param failureBlock 失败的回调 block
  */
-+ (void)downloadFileWithURL:(NSString *)url  withParameters:(id )parameters  downloadCreateDirectoryName:(NSString *)dirName withProgressBlock:(HttpRequestProgress)progressBlock withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
-    [[HttpServer sharedClient]downloadFileWithURL:url withParameters:parameters  downloadCreateDirectoryName:dirName withProgressBlock:progressBlock withSuccessBlock:successBlock withFailureBlock:failureBlock];
++ (void)downloadFileWithURL:(NSString *)url  withParameters:(id )parameters  downloadCreateDirectoryName:(NSString *)dirName withDownloadProgressBlock:(HttpDownloadProgress)progressBlock withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
+    [[HttpServer sharedClient]downloadFileWithURL:url withParameters:parameters  downloadCreateDirectoryName:dirName withDownloadProgressBlock:progressBlock withSuccessBlock:successBlock withFailureBlock:failureBlock];
 }
-- (void)downloadFileWithURL:(NSString *)url withParameters:(id )parameters downloadCreateDirectoryName:(NSString *)dirName withProgressBlock:(HttpRequestProgress)progressBlock withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
+- (void)downloadFileWithURL:(NSString *)url withParameters:(id )parameters downloadCreateDirectoryName:(NSString *)dirName withDownloadProgressBlock:(HttpDownloadProgress)progressBlock withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
     
     NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     

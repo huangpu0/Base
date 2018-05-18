@@ -17,7 +17,7 @@ typedef void (^HttpRequestSuccess)  (id response);
 typedef void (^HttpRequestFailed)  (NSError *error);
 
 //请求数据进度的block Progress.completedUnitCount:当前大小 - Progress.totalUnitCount:总大小
-typedef void (^HttpRequestProgress)  (NSProgress *progress);
+typedef void (^HttpDownloadProgress)  (NSProgress *progress);
 
 //请求数据缓存回调的block
 typedef void (^HttpRequestCache)  (id responseCache);
@@ -119,7 +119,7 @@ typedef void (^HttpRequestCache)  (id responseCache);
 + (void)downloadFileWithURL:(NSString *)url
              withParameters:(id )parameters
       downloadCreateDirectoryName:(NSString *)dirName
-          withProgressBlock:(HttpRequestProgress)progressBlock
+          withDownloadProgressBlock:(HttpDownloadProgress)progressBlock
            withSuccessBlock:(HttpRequestSuccess)successBlock
            withFailureBlock:(HttpRequestFailed)failureBlock;
 
