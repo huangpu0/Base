@@ -33,7 +33,7 @@
 #pragma mark -- 构建主要视图
 - (void)setUpTabView{
     
-    NSArray *array = [NSArray arrayWithObjects:@"烟花动画",@"跑车动画",@"飞机动画",@"刷火箭",@"钻石动画", nil];
+    NSArray *array = [NSArray arrayWithObjects:@"烟花动画",@"跑车动画",@"飞机动画",@"刷火箭",@"钻石动画",@"雪花", nil];
     [self.dataArray addObjectsFromArray:array];
     
     self.tabView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0,kScreen_Width, kScreen_Height) style:UITableViewStylePlain];

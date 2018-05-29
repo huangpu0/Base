@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C162262A7D88AE65585C894D /* libPods-BaseDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0D893B7313EE4C7E11A643 /* libPods-BaseDemo.a */; };
+		F6074F0F20B269000013A6C8 /* SnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6074F0E20B269000013A6C8 /* SnowView.m */; };
 		F61D15151FD7C87700025F9A /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F61D15141FD7C87700025F9A /* ProgressHUD.m */; };
 		F61D15191FD7FC7000025F9A /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F61D15181FD7FC7000025F9A /* ProgressHUD.bundle */; };
 		F624A4C61FD8F472008882C0 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F624A4C51FD8F472008882C0 /* NSDate+Extension.m */; };
@@ -82,6 +83,8 @@
 		2C0D893B7313EE4C7E11A643 /* libPods-BaseDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7194171351374F7CB458E8 /* Pods-BaseDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseDemo/Pods-BaseDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E6A7F09EF163B01F6B2FD62F /* Pods-BaseDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseDemo/Pods-BaseDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F6074F0D20B269000013A6C8 /* SnowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnowView.h; sourceTree = "<group>"; };
+		F6074F0E20B269000013A6C8 /* SnowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnowView.m; sourceTree = "<group>"; };
 		F61D15131FD7C87700025F9A /* ProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		F61D15141FD7C87700025F9A /* ProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		F61D15181FD7FC7000025F9A /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
@@ -243,6 +246,8 @@
 				F6407A9C20A68AB60029516D /* RocketView.xib */,
 				F6407A9E20A68CCF0029516D /* DiamondView.h */,
 				F6407A9F20A68CCF0029516D /* DiamondView.m */,
+				F6074F0D20B269000013A6C8 /* SnowView.h */,
+				F6074F0E20B269000013A6C8 /* SnowView.m */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -781,6 +786,7 @@
 				F6DA141420AAE5ED00B194B9 /* MainNavigationController.m in Sources */,
 				F6C9097B1FD67B2C00C8F04C /* MJAutoFooterTool.m in Sources */,
 				F6D6A23720AECB520062CA3B /* NetworkStatus.m in Sources */,
+				F6074F0F20B269000013A6C8 /* SnowView.m in Sources */,
 				F6C9097A1FD67B2C00C8F04C /* MJHeadTool.m in Sources */,
 				F6C9098D1FD67C1C00C8F04C /* HttpServer.m in Sources */,
 				F6C909821FD67B2C00C8F04C /* LPTitleModel.m in Sources */,

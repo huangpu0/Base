@@ -12,7 +12,7 @@
 #import "PlaneView.h"
 #import "RocketView.h"
 #import "DiamondView.h"
-
+#import "SnowView.h"
 @interface LiveAnimationViewController ()
 
 @end
@@ -75,6 +75,13 @@
             [self.view addSubview:diaView];
 
             
+        }
+            break;
+        case 5:
+            //雪花
+        {
+            SnowView *snowView = [[SnowView alloc]initWithFrame:self.view.bounds];
+            [self.view addSubview:snowView];
         }
             break;
 
