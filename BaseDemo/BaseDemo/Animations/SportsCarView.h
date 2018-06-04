@@ -10,9 +10,9 @@
 
 @interface SportsCarView : UIView
 
-@property (nonatomic,strong,nullable)NSMutableArray *carArr;
+@property (nonatomic, strong, nullable) NSMutableArray *carArr;
 
-@property (nullable, nonatomic, copy) NSArray *curveControlAndEndPoints;
+@property (nonatomic, copy  , nullable) NSArray *curveControlAndEndPoints;
 
 + (nullable instancetype)loadCarViewWithPoint:(CGPoint)point;
 

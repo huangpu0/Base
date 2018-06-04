@@ -29,8 +29,12 @@
     return carView;
 }
 
-//CGPointMake(0, 100)  end:CGPointMake(self.view.bounds.size.width +166, 500)
+
+/**
+   CGPointMake(0, 100)  end:CGPointMake(self.view.bounds.size.width +166, 500)
+ */
 - (void)addAnimationsMoveToPoint:(CGPoint)movePoints endPoint:(CGPoint)endPoint{
+    
     CAKeyframeAnimation *position = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathMoveToPoint(path, NULL, movePoints.x, movePoints.y);
