@@ -21,6 +21,8 @@
 #define PreviewServer  0
 #define ReleasedServer 0
 
+
+#pragma mark -- >> 服务器环境配置相关
 /** 服务器 -- >> 开发环境*/
 #if   DevelopServer
 
@@ -38,7 +40,10 @@
 
 #endif
 
+
+#pragma mark -- >> 对应模块详情地址 -- >> URL
 /**  对应模块详情地址 -- >> URL*/
-#define kGetBannerPhotoList @"GetBannerPhotoList"//首页广告
+
+#define kGetBannerPhotoList @"GetBannerPhotoList" //首页广告
 
 #endif /* InterfaceParameterList_h */
