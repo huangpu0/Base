@@ -43,7 +43,7 @@
         UILabel *desLab = [[UILabel alloc]init];
         desLab.frame = CGRectMake(125, 105, kScreen_Width - 250, 30);
         desLab.text = @"网络出了点问题";
-        desLab.textColor = RGBOFColor(0xaaaaaa);
+        desLab.textColor = kRgbOfColor(0xaaaaaa);
         desLab.textAlignment = NSTextAlignmentCenter;
         desLab.font = [UIFont systemFontOfSize:12.0f];
         [_badView addSubview:desLab];
@@ -52,10 +52,10 @@
         refreBtn.frame = CGRectMake(125, desLab.y + 50, kScreen_Width - 250, 35);
         refreBtn.layer.cornerRadius =17.50f;
         refreBtn.layer.borderWidth = 1;
-        refreBtn.layer.borderColor = RGBOFColor(0xaaaaaa).CGColor;
+        refreBtn.layer.borderColor = kRgbOfColor(0xaaaaaa).CGColor;
         refreBtn.layer.masksToBounds = YES;
         [refreBtn setTitle:@"刷新看看" forState:UIControlStateNormal];
-        [refreBtn setTitleColor:RGBOFColor(0x000000) forState:UIControlStateNormal];
+        [refreBtn setTitleColor:kRgbOfColor(0x000000) forState:UIControlStateNormal];
         [refreBtn addTarget:self action:@selector(refreshUI:) forControlEvents:UIControlEventTouchUpInside];
         [_badView addSubview:refreBtn];
         
@@ -76,7 +76,7 @@
         UILabel *desLab = [[UILabel alloc]init];
         desLab.frame = CGRectMake(125, 105, kScreen_Width - 250, 30);
         desLab.text = @"糟糕,数据出问题了!";
-        desLab.textColor = RGBOFColor(0xaaaaaa);
+        desLab.textColor = kRgbOfColor(0xaaaaaa);
         desLab.textAlignment = NSTextAlignmentCenter;
         desLab.font = [UIFont systemFontOfSize:12.0f];
         [_errorView addSubview:desLab];
@@ -85,10 +85,10 @@
         backBtn.frame = CGRectMake(58, desLab.y + 50, kScreen_Width/2 - 68, 35);
         backBtn.layer.cornerRadius = 17.50f;
         backBtn.layer.borderWidth = 1;
-        backBtn.layer.borderColor = RGBOFColor(0xaaaaaa).CGColor;
+        backBtn.layer.borderColor = kRgbOfColor(0xaaaaaa).CGColor;
         backBtn.layer.masksToBounds = YES;
         [backBtn setTitle:@"返回" forState:UIControlStateNormal];
-        [backBtn setTitleColor:RGBOFColor(0x000000) forState:UIControlStateNormal];
+        [backBtn setTitleColor:kRgbOfColor(0x000000) forState:UIControlStateNormal];
         [backBtn addTarget:self action:@selector(backLeft:) forControlEvents:UIControlEventTouchUpInside];
         [_errorView addSubview:backBtn];
         
@@ -96,10 +96,10 @@
         refreBtn.frame = CGRectMake(kScreen_Width/2 + 10 , desLab.y + 50, kScreen_Width/2 - 68, 35);
         refreBtn.layer.cornerRadius = 17.50f;
         refreBtn.layer.borderWidth = 1;
-        refreBtn.layer.borderColor = RGBOFColor(0xaaaaaa).CGColor;
+        refreBtn.layer.borderColor = kRgbOfColor(0xaaaaaa).CGColor;
         refreBtn.layer.masksToBounds = YES;
         [refreBtn setTitle:@"刷新看看" forState:UIControlStateNormal];
-        [refreBtn setTitleColor:RGBOFColor(0x000000) forState:UIControlStateNormal];
+        [refreBtn setTitleColor:kRgbOfColor(0x000000) forState:UIControlStateNormal];
         [refreBtn addTarget:self action:@selector(refreshUI:) forControlEvents:UIControlEventTouchUpInside];
         [_errorView addSubview:refreBtn];
         

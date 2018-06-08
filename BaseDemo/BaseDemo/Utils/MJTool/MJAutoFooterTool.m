@@ -18,7 +18,7 @@
     
     //添加label
     UILabel *label = [[UILabel alloc]init];;
-    label.textColor = RGBColor(1.0, 0.5, 0);
+    label.textColor = kRgbColor(1.0, 0.5, 0);
     label.font = [UIFont boldSystemFontOfSize:12];
     label.textAlignment = NSTextAlignmentCenter;
     [self addSubview:label];

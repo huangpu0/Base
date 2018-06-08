@@ -11,34 +11,34 @@
 #define InterfaceParameterList_h
 
 /**
- Version 对应的值有v1
+ Version 对应的版本号 -- >> v1
  develop 是开发版本接口
  preview 预览版
  released 是线上版本接口
  */
 
-#define DevelopServer  0
-#define PreviewServer  1
+#define DevelopServer  1
+#define PreviewServer  0
 #define ReleasedServer 0
 
+/** 服务器 -- >> 开发环境*/
 #if   DevelopServer
 
 #define DEMO_SERVER @"http://caiyiquan.082818.com/api/Client/ApiHandle.ashx"//加密接口
 
+/** 服务器 -- >> 预览环境*/
 #elif PreviewServer
 
 #define DEMO_SERVER @"http://caiyiquan.082818.com/api"//加密接口
 
+/** 服务器 -- >> 正式环境*/
 #elif ReleasedServer
 
 #define DEMO_SERVER @"http://caiyiquan.082818.com"//加密接口
 
 #endif
 
-/**
- 对应模块详情地址 -- >> URL
- */
-
-#define MD_GetBannerPhotoList @"GetBannerPhotoList"//首页广告
+/**  对应模块详情地址 -- >> URL*/
+#define kGetBannerPhotoList @"GetBannerPhotoList"//首页广告
 
 #endif /* InterfaceParameterList_h */
