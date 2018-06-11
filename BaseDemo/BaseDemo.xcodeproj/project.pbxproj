@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C162262A7D88AE65585C894D /* libPods-BaseDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0D893B7313EE4C7E11A643 /* libPods-BaseDemo.a */; };
+		F60280F320CE236A00E4038B /* PayNumbeKeyboard.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F60280F220CE236A00E4038B /* PayNumbeKeyboard.bundle */; };
+		F60280F620CE23F900E4038B /* UITextField+NumberKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = F60280F520CE23F900E4038B /* UITextField+NumberKeyboard.m */; };
+		F60280F920CE250500E4038B /* PayNumberKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F60280F820CE250500E4038B /* PayNumberKeyboardView.m */; };
+		F60280FB20CE252300E4038B /* PayNumberKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F60280FA20CE252300E4038B /* PayNumberKeyboardView.xib */; };
+		F60280FF20CE705E00E4038B /* LaunchIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F60280FD20CE705E00E4038B /* LaunchIntroductionView.m */; };
 		F6074F0F20B269000013A6C8 /* SnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6074F0E20B269000013A6C8 /* SnowView.m */; };
 		F63428882063B89E00E2B9F5 /* NetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F63428872063B89E00E2B9F5 /* NetworkCache.m */; };
 		F6407A7A20A575280029516D /* FireworksView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6407A7920A575280029516D /* FireworksView.m */; };
@@ -39,6 +44,9 @@
 		F67C045D20CA20D6009B8452 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F67C045120CA20D6009B8452 /* MASViewConstraint.m */; };
 		F67C045E20CA20D6009B8452 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = F67C045220CA20D6009B8452 /* MASViewAttribute.m */; };
 		F67C045F20CA20D6009B8452 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F67C045320CA20D6009B8452 /* README.md */; };
+		F686C61920CBC8AB005BB011 /* BXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F686C61320CBC8AB005BB011 /* BXTextField.m */; };
+		F686C61A20CBC8AB005BB011 /* UITextField+BXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F686C61420CBC8AB005BB011 /* UITextField+BXExtension.m */; };
+		F686C61B20CBC8AB005BB011 /* UIView+BXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F686C61520CBC8AB005BB011 /* UIView+BXExtension.m */; };
 		F6C9098D1FD67C1C00C8F04C /* HttpServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C9098C1FD67C1C00C8F04C /* HttpServer.m */; };
 		F6C909911FD6965300C8F04C /* HttpBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C909901FD6965300C8F04C /* HttpBaseModel.m */; };
 		F6D6A23720AECB520062CA3B /* NetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D6A23620AECB520062CA3B /* NetworkStatus.m */; };
@@ -98,6 +106,14 @@
 		2C0D893B7313EE4C7E11A643 /* libPods-BaseDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7194171351374F7CB458E8 /* Pods-BaseDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseDemo/Pods-BaseDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E6A7F09EF163B01F6B2FD62F /* Pods-BaseDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseDemo/Pods-BaseDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F60280F220CE236A00E4038B /* PayNumbeKeyboard.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PayNumbeKeyboard.bundle; sourceTree = "<group>"; };
+		F60280F420CE23F900E4038B /* UITextField+NumberKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+NumberKeyboard.h"; sourceTree = "<group>"; };
+		F60280F520CE23F900E4038B /* UITextField+NumberKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+NumberKeyboard.m"; sourceTree = "<group>"; };
+		F60280F720CE250500E4038B /* PayNumberKeyboardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayNumberKeyboardView.h; sourceTree = "<group>"; };
+		F60280F820CE250500E4038B /* PayNumberKeyboardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayNumberKeyboardView.m; sourceTree = "<group>"; };
+		F60280FA20CE252300E4038B /* PayNumberKeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayNumberKeyboardView.xib; sourceTree = "<group>"; };
+		F60280FD20CE705E00E4038B /* LaunchIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchIntroductionView.m; sourceTree = "<group>"; };
+		F60280FE20CE705E00E4038B /* LaunchIntroductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchIntroductionView.h; sourceTree = "<group>"; };
 		F6074F0D20B269000013A6C8 /* SnowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnowView.h; sourceTree = "<group>"; };
 		F6074F0E20B269000013A6C8 /* SnowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnowView.m; sourceTree = "<group>"; };
 		F63428862063B89300E2B9F5 /* NetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCache.h; sourceTree = "<group>"; };
@@ -160,6 +176,12 @@
 		F67C045120CA20D6009B8452 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		F67C045220CA20D6009B8452 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		F67C045320CA20D6009B8452 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F686C61320CBC8AB005BB011 /* BXTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXTextField.m; sourceTree = "<group>"; };
+		F686C61420CBC8AB005BB011 /* UITextField+BXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BXExtension.m"; sourceTree = "<group>"; };
+		F686C61520CBC8AB005BB011 /* UIView+BXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BXExtension.m"; sourceTree = "<group>"; };
+		F686C61620CBC8AB005BB011 /* UITextField+BXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BXExtension.h"; sourceTree = "<group>"; };
+		F686C61720CBC8AB005BB011 /* BXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXTextField.h; sourceTree = "<group>"; };
+		F686C61820CBC8AB005BB011 /* UIView+BXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BXExtension.h"; sourceTree = "<group>"; };
 		F6C909501FD6763100C8F04C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
 		F6C9098C1FD67C1C00C8F04C /* HttpServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpServer.m; sourceTree = "<group>"; };
 		F6C9098E1FD67C2B00C8F04C /* HttpServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpServer.h; sourceTree = "<group>"; };
@@ -300,6 +322,28 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
+		F60280F120CE235200E4038B /* PayNumberKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F60280F220CE236A00E4038B /* PayNumbeKeyboard.bundle */,
+				F60280F420CE23F900E4038B /* UITextField+NumberKeyboard.h */,
+				F60280F520CE23F900E4038B /* UITextField+NumberKeyboard.m */,
+				F60280F720CE250500E4038B /* PayNumberKeyboardView.h */,
+				F60280F820CE250500E4038B /* PayNumberKeyboardView.m */,
+				F60280FA20CE252300E4038B /* PayNumberKeyboardView.xib */,
+			);
+			path = PayNumberKeyboard;
+			sourceTree = "<group>";
+		};
+		F60280FC20CE705E00E4038B /* LaunchIntroduction */ = {
+			isa = PBXGroup;
+			children = (
+				F60280FE20CE705E00E4038B /* LaunchIntroductionView.h */,
+				F60280FD20CE705E00E4038B /* LaunchIntroductionView.m */,
+			);
+			path = LaunchIntroduction;
+			sourceTree = "<group>";
+		};
 		F67109261FD656C000D2C2C2 = {
 			isa = PBXGroup;
 			children = (
@@ -365,7 +409,6 @@
 		F671096C1FD660BF00D2C2C2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F6DA141120AADC0D00B194B9 /* GuideViewControoler */,
 				F6DA13EE20AACEA000B194B9 /* MainTabbarRootViewController */,
 				F6DA13F520AAD66600B194B9 /* LoginViewController */,
 				F6DA13F620AAD67600B194B9 /* HomePageRootViewController */,
@@ -435,6 +478,19 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		F686C61220CBC8AB005BB011 /* JYJKeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				F686C61720CBC8AB005BB011 /* BXTextField.h */,
+				F686C61320CBC8AB005BB011 /* BXTextField.m */,
+				F686C61620CBC8AB005BB011 /* UITextField+BXExtension.h */,
+				F686C61420CBC8AB005BB011 /* UITextField+BXExtension.m */,
+				F686C61520CBC8AB005BB011 /* UIView+BXExtension.m */,
+				F686C61820CBC8AB005BB011 /* UIView+BXExtension.h */,
+			);
+			path = JYJKeyBoard;
+			sourceTree = "<group>";
+		};
 		F6DA13EE20AACEA000B194B9 /* MainTabbarRootViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,13 +550,6 @@
 			path = PersonalCenterRootViewController;
 			sourceTree = "<group>";
 		};
-		F6DA141120AADC0D00B194B9 /* GuideViewControoler */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GuideViewControoler;
-			sourceTree = "<group>";
-		};
 		F6DA141820ABD44900B194B9 /* ActivitySubViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,6 +562,9 @@
 		F6E81FFF20C68CF500D1901F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F60280FC20CE705E00E4038B /* LaunchIntroduction */,
+				F60280F120CE235200E4038B /* PayNumberKeyboard */,
+				F686C61220CBC8AB005BB011 /* JYJKeyBoard */,
 				F67C043720CA20D6009B8452 /* Masonry */,
 				F6E8200020C68CF500D1901F /* YYCache */,
 				F6E8200920C68CF500D1901F /* FilesManagerTool */,
@@ -787,12 +839,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E8204420C68CF600D1901F /* ProgressHUD.bundle in Resources */,
+				F60280F320CE236A00E4038B /* PayNumbeKeyboard.bundle in Resources */,
 				F671093F1FD656C000D2C2C2 /* LaunchScreen.storyboard in Resources */,
 				F67C045420CA20D6009B8452 /* LICENSE in Resources */,
 				F6407A9D20A68AB60029516D /* RocketView.xib in Resources */,
 				F6407A9320A59DD80029516D /* SportsCarView.xib in Resources */,
 				F6407A9820A59DE80029516D /* PlaneView.xib in Resources */,
 				F67C045F20CA20D6009B8452 /* README.md in Resources */,
+				F60280FB20CE252300E4038B /* PayNumberKeyboardView.xib in Resources */,
 				F671093C1FD656C000D2C2C2 /* Assets.xcassets in Resources */,
 				F671093A1FD656C000D2C2C2 /* Main.storyboard in Resources */,
 			);
@@ -875,9 +929,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F686C61A20CBC8AB005BB011 /* UITextField+BXExtension.m in Sources */,
 				F6E8205420C68CF600D1901F /* Convert.m in Sources */,
+				F686C61B20CBC8AB005BB011 /* UIView+BXExtension.m in Sources */,
 				F6E8203D20C68CF600D1901F /* YYDiskCache.m in Sources */,
 				F67C045620CA20D6009B8452 /* ViewController+MASAdditions.m in Sources */,
+				F686C61920CBC8AB005BB011 /* BXTextField.m in Sources */,
 				F63428882063B89E00E2B9F5 /* NetworkCache.m in Sources */,
 				F6DA141020AADBBC00B194B9 /* LoginViewController.m in Sources */,
 				F6407A7A20A575280029516D /* FireworksView.m in Sources */,
@@ -885,6 +942,7 @@
 				F6DA13F220AACF2300B194B9 /* MainRootTabBarController.m in Sources */,
 				F67C045520CA20D6009B8452 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				F6E8205220C68CF600D1901F /* AC_ProgressSlider.m in Sources */,
+				F60280FF20CE705E00E4038B /* LaunchIntroductionView.m in Sources */,
 				F67C045720CA20D6009B8452 /* MASCompositeConstraint.m in Sources */,
 				F6E8203F20C68CF600D1901F /* YYKVStorage.m in Sources */,
 				F6DA141720ABCA7000B194B9 /* AnimationTableViewCell.m in Sources */,
@@ -899,6 +957,7 @@
 				F6D6A23720AECB520062CA3B /* NetworkStatus.m in Sources */,
 				F67C045820CA20D6009B8452 /* MASConstraintMaker.m in Sources */,
 				F6074F0F20B269000013A6C8 /* SnowView.m in Sources */,
+				F60280F920CE250500E4038B /* PayNumberKeyboardView.m in Sources */,
 				F6E8204C20C68CF600D1901F /* LPTitleModel.m in Sources */,
 				F6E8204120C68CF600D1901F /* FilesManager.m in Sources */,
 				F6C9098D1FD67C1C00C8F04C /* HttpServer.m in Sources */,
@@ -931,6 +990,7 @@
 				F6E8204320C68CF600D1901F /* MJAutoFooterTool.m in Sources */,
 				F6E8204B20C68CF600D1901F /* LPUserModel.m in Sources */,
 				F67109341FD656C000D2C2C2 /* AppDelegate.m in Sources */,
+				F60280F620CE23F900E4038B /* UITextField+NumberKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
