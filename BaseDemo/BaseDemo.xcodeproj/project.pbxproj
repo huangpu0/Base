@@ -12,7 +12,7 @@
 		F60280F620CE23F900E4038B /* UITextField+NumberKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = F60280F520CE23F900E4038B /* UITextField+NumberKeyboard.m */; };
 		F60280F920CE250500E4038B /* PayNumberKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F60280F820CE250500E4038B /* PayNumberKeyboardView.m */; };
 		F60280FB20CE252300E4038B /* PayNumberKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F60280FA20CE252300E4038B /* PayNumberKeyboardView.xib */; };
-		F60280FF20CE705E00E4038B /* LaunchIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F60280FD20CE705E00E4038B /* LaunchIntroductionView.m */; };
+		F602810320CE72D700E4038B /* LaunchIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F602810120CE72D700E4038B /* LaunchIntroductionView.m */; };
 		F6074F0F20B269000013A6C8 /* SnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6074F0E20B269000013A6C8 /* SnowView.m */; };
 		F63428882063B89E00E2B9F5 /* NetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F63428872063B89E00E2B9F5 /* NetworkCache.m */; };
 		F6407A7A20A575280029516D /* FireworksView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6407A7920A575280029516D /* FireworksView.m */; };
@@ -112,8 +112,8 @@
 		F60280F720CE250500E4038B /* PayNumberKeyboardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayNumberKeyboardView.h; sourceTree = "<group>"; };
 		F60280F820CE250500E4038B /* PayNumberKeyboardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayNumberKeyboardView.m; sourceTree = "<group>"; };
 		F60280FA20CE252300E4038B /* PayNumberKeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayNumberKeyboardView.xib; sourceTree = "<group>"; };
-		F60280FD20CE705E00E4038B /* LaunchIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchIntroductionView.m; sourceTree = "<group>"; };
-		F60280FE20CE705E00E4038B /* LaunchIntroductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchIntroductionView.h; sourceTree = "<group>"; };
+		F602810120CE72D700E4038B /* LaunchIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchIntroductionView.m; sourceTree = "<group>"; };
+		F602810220CE72D700E4038B /* LaunchIntroductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchIntroductionView.h; sourceTree = "<group>"; };
 		F6074F0D20B269000013A6C8 /* SnowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnowView.h; sourceTree = "<group>"; };
 		F6074F0E20B269000013A6C8 /* SnowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnowView.m; sourceTree = "<group>"; };
 		F63428862063B89300E2B9F5 /* NetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCache.h; sourceTree = "<group>"; };
@@ -335,11 +335,11 @@
 			path = PayNumberKeyboard;
 			sourceTree = "<group>";
 		};
-		F60280FC20CE705E00E4038B /* LaunchIntroduction */ = {
+		F602810020CE72D700E4038B /* LaunchIntroduction */ = {
 			isa = PBXGroup;
 			children = (
-				F60280FE20CE705E00E4038B /* LaunchIntroductionView.h */,
-				F60280FD20CE705E00E4038B /* LaunchIntroductionView.m */,
+				F602810220CE72D700E4038B /* LaunchIntroductionView.h */,
+				F602810120CE72D700E4038B /* LaunchIntroductionView.m */,
 			);
 			path = LaunchIntroduction;
 			sourceTree = "<group>";
@@ -409,6 +409,7 @@
 		F671096C1FD660BF00D2C2C2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F602810020CE72D700E4038B /* LaunchIntroduction */,
 				F6DA13EE20AACEA000B194B9 /* MainTabbarRootViewController */,
 				F6DA13F520AAD66600B194B9 /* LoginViewController */,
 				F6DA13F620AAD67600B194B9 /* HomePageRootViewController */,
@@ -562,7 +563,6 @@
 		F6E81FFF20C68CF500D1901F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F60280FC20CE705E00E4038B /* LaunchIntroduction */,
 				F60280F120CE235200E4038B /* PayNumberKeyboard */,
 				F686C61220CBC8AB005BB011 /* JYJKeyBoard */,
 				F67C043720CA20D6009B8452 /* Masonry */,
@@ -942,7 +942,7 @@
 				F6DA13F220AACF2300B194B9 /* MainRootTabBarController.m in Sources */,
 				F67C045520CA20D6009B8452 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				F6E8205220C68CF600D1901F /* AC_ProgressSlider.m in Sources */,
-				F60280FF20CE705E00E4038B /* LaunchIntroductionView.m in Sources */,
+				F602810320CE72D700E4038B /* LaunchIntroductionView.m in Sources */,
 				F67C045720CA20D6009B8452 /* MASCompositeConstraint.m in Sources */,
 				F6E8203F20C68CF600D1901F /* YYKVStorage.m in Sources */,
 				F6DA141720ABCA7000B194B9 /* AnimationTableViewCell.m in Sources */,
