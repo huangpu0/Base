@@ -47,6 +47,16 @@
 		F686C61920CBC8AB005BB011 /* BXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F686C61320CBC8AB005BB011 /* BXTextField.m */; };
 		F686C61A20CBC8AB005BB011 /* UITextField+BXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F686C61420CBC8AB005BB011 /* UITextField+BXExtension.m */; };
 		F686C61B20CBC8AB005BB011 /* UIView+BXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F686C61520CBC8AB005BB011 /* UIView+BXExtension.m */; };
+		F6BA8AF620E1DEE900C66C8E /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BA8AF520E1DEE900C66C8E /* VideoToolbox.framework */; };
+		F6BA8AF820E1DEF200C66C8E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BA8AF720E1DEF200C66C8E /* SystemConfiguration.framework */; };
+		F6BA8AFA20E1DF0400C66C8E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BA8AF920E1DF0400C66C8E /* CoreTelephony.framework */; };
+		F6BA8AFC20E1DF0C00C66C8E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BA8AFB20E1DF0C00C66C8E /* AVFoundation.framework */; };
+		F6BA8AFE20E1DF1800C66C8E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BA8AFD20E1DF1800C66C8E /* CoreMedia.framework */; };
+		F6BA8B0020E1DF2700C66C8E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BA8AFF20E1DF2700C66C8E /* CoreGraphics.framework */; };
+		F6BA8B0420E1DF4D00C66C8E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BA8B0320E1DF4D00C66C8E /* libz.tbd */; };
+		F6BA8B0620E1DF6200C66C8E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BA8B0520E1DF6200C66C8E /* libiconv.tbd */; };
+		F6BA8B0820E1DF6F00C66C8E /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BA8B0720E1DF6F00C66C8E /* libresolv.tbd */; };
+		F6BA8B0B20E1E12500C66C8E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BA8B0120E1DF4000C66C8E /* libstdc++.tbd */; };
 		F6C9098D1FD67C1C00C8F04C /* HttpServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C9098C1FD67C1C00C8F04C /* HttpServer.m */; };
 		F6C909911FD6965300C8F04C /* HttpBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C909901FD6965300C8F04C /* HttpBaseModel.m */; };
 		F6D6A23720AECB520062CA3B /* NetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D6A23620AECB520062CA3B /* NetworkStatus.m */; };
@@ -182,6 +192,17 @@
 		F686C61620CBC8AB005BB011 /* UITextField+BXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BXExtension.h"; sourceTree = "<group>"; };
 		F686C61720CBC8AB005BB011 /* BXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXTextField.h; sourceTree = "<group>"; };
 		F686C61820CBC8AB005BB011 /* UIView+BXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BXExtension.h"; sourceTree = "<group>"; };
+		F6BA8AF520E1DEE900C66C8E /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		F6BA8AF720E1DEF200C66C8E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F6BA8AF920E1DF0400C66C8E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F6BA8AFB20E1DF0C00C66C8E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F6BA8AFD20E1DF1800C66C8E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F6BA8AFF20E1DF2700C66C8E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F6BA8B0120E1DF4000C66C8E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		F6BA8B0320E1DF4D00C66C8E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F6BA8B0520E1DF6200C66C8E /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		F6BA8B0720E1DF6F00C66C8E /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		F6BA8B0920E1E0EE00C66C8E /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		F6C909501FD6763100C8F04C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
 		F6C9098C1FD67C1C00C8F04C /* HttpServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpServer.m; sourceTree = "<group>"; };
 		F6C9098E1FD67C2B00C8F04C /* HttpServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpServer.h; sourceTree = "<group>"; };
@@ -262,6 +283,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6BA8B0B20E1E12500C66C8E /* libstdc++.tbd in Frameworks */,
+				F6BA8B0820E1DF6F00C66C8E /* libresolv.tbd in Frameworks */,
+				F6BA8B0620E1DF6200C66C8E /* libiconv.tbd in Frameworks */,
+				F6BA8B0420E1DF4D00C66C8E /* libz.tbd in Frameworks */,
+				F6BA8B0020E1DF2700C66C8E /* CoreGraphics.framework in Frameworks */,
+				F6BA8AFE20E1DF1800C66C8E /* CoreMedia.framework in Frameworks */,
+				F6BA8AFC20E1DF0C00C66C8E /* AVFoundation.framework in Frameworks */,
+				F6BA8AFA20E1DF0400C66C8E /* CoreTelephony.framework in Frameworks */,
+				F6BA8AF820E1DEF200C66C8E /* SystemConfiguration.framework in Frameworks */,
+				F6BA8AF620E1DEE900C66C8E /* VideoToolbox.framework in Frameworks */,
 				C162262A7D88AE65585C894D /* libPods-BaseDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +326,17 @@
 		ED938C88D2F0D9087803076B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6BA8B0920E1E0EE00C66C8E /* libstdc++.6.0.9.tbd */,
+				F6BA8B0720E1DF6F00C66C8E /* libresolv.tbd */,
+				F6BA8B0520E1DF6200C66C8E /* libiconv.tbd */,
+				F6BA8B0320E1DF4D00C66C8E /* libz.tbd */,
+				F6BA8B0120E1DF4000C66C8E /* libstdc++.tbd */,
+				F6BA8AFF20E1DF2700C66C8E /* CoreGraphics.framework */,
+				F6BA8AFD20E1DF1800C66C8E /* CoreMedia.framework */,
+				F6BA8AFB20E1DF0C00C66C8E /* AVFoundation.framework */,
+				F6BA8AF920E1DF0400C66C8E /* CoreTelephony.framework */,
+				F6BA8AF720E1DEF200C66C8E /* SystemConfiguration.framework */,
+				F6BA8AF520E1DEE900C66C8E /* VideoToolbox.framework */,
 				2C0D893B7313EE4C7E11A643 /* libPods-BaseDemo.a */,
 			);
 			name = Frameworks;
@@ -373,6 +415,7 @@
 				F67109331FD656C000D2C2C2 /* AppDelegate.m */,
 				F67109351FD656C000D2C2C2 /* ViewController.h */,
 				F67109361FD656C000D2C2C2 /* ViewController.m */,
+				F6BA8AE820E1DDF600C66C8E /* Third */,
 				F6015A2520A55E51004B2CB8 /* Animations */,
 				F6E81FFF20C68CF500D1901F /* Utils */,
 				F67109751FD663B800D2C2C2 /* Network */,
@@ -490,6 +533,13 @@
 				F686C61820CBC8AB005BB011 /* UIView+BXExtension.h */,
 			);
 			path = JYJKeyBoard;
+			sourceTree = "<group>";
+		};
+		F6BA8AE820E1DDF600C66C8E /* Third */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Third;
 			sourceTree = "<group>";
 		};
 		F6DA13EE20AACEA000B194B9 /* MainTabbarRootViewController */ = {
@@ -714,8 +764,8 @@
 		F6E8203720C68CF500D1901F /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				F6E8203820C68CF500D1901F /* Keyboard.m */,
 				F6E8203920C68CF500D1901F /* Keyboard.h */,
+				F6E8203820C68CF500D1901F /* Keyboard.m */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -1158,8 +1208,14 @@
 			baseConfigurationReference = DD7194171351374F7CB458E8 /* Pods-BaseDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HXSKT393M6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BaseDemo/Third/SDK/ImSDK",
+					"$(PROJECT_DIR)/BaseDemo/Third/SDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = BaseDemo/Info.plist;
@@ -1177,8 +1233,14 @@
 			baseConfigurationReference = E6A7F09EF163B01F6B2FD62F /* Pods-BaseDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HXSKT393M6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BaseDemo/Third/SDK/ImSDK",
+					"$(PROJECT_DIR)/BaseDemo/Third/SDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = BaseDemo/Info.plist;

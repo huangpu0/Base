@@ -87,4 +87,7 @@
 /** 工商税号 */
 - (BOOL)isValidTaxNo;
 
+/** 字符串是否含有emoji */
+- (BOOL)isStringContrainsEmoji;
+
 @end
