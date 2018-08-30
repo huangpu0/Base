@@ -7,7 +7,7 @@
 //
 
 #import "HomePageRootViewController.h"
-#import "TXLiteAVSDK_Professional/TXLivePush.h"
+
 
 @interface HomePageRootViewController ()
 
@@ -18,7 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
 
 - (void)didReceiveMemoryWarning {

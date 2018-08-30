@@ -90,9 +90,8 @@
 }
 - (void)progressPopUp:(NSString *)status;{
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (!self.superview) [self.kWindow addSubview:self];
-        [self.kWindow makeKeyAndVisible];
-        if (!self.superview) [self.kWindow addSubview:self];
+        if (!self.superview)
+        [self.kWindow addSubview:self];
         [self.kWindow makeKeyAndVisible];
         self.kLabel.text = status;
         self.kWhirlView.center = CGPointMake(kBackViewWidth/2, kBackViewHeight/2-10);

@@ -66,20 +66,23 @@
             timeString = @"刚刚";
         }
         
-        if (cha/60 >=1 && cha/3600 < 1) { //1分钟<=N<1小时：N分钟前(ex:25分钟前)
+        if (cha/60 >=1 && cha/3600 < 1) {
+            //1分钟<=N<1小时：N分钟前(ex:25分钟前)
             timeString = [NSString stringWithFormat:@"%f", cha/60];
             timeString = [timeString substringToIndex:timeString.length-7];
             timeString=[NSString stringWithFormat:@"%@分钟前", timeString];
         }
-        if (cha/3600>=1 && cha/86400<1) { //1小时<=N<=当天：HH:mm(ex:17:32)
+        if (cha/3600>=1 && cha/86400<1) {
+            //1小时<=N<=当天：HH:mm(ex:17:32)
             timeString = [str1 substringWithRange:NSMakeRange(11, 5)];
         }
-        if (cha/86400>=1 && cha/31536000 < 1) //当天<N<=当年：MM-dd (ex:04-01)
+        if (cha/86400>=1 && cha/31536000 < 1)
+            //当天<N<=当年：MM-dd (ex:04-01)
         {
             timeString = [str1 substringWithRange:NSMakeRange(5, 5)];
         }
         
-        if (cha/31536000 > 1) // N>当年：yy-MM-dd(ex:14-12-30)
+        if (cha/31536000 > 1)// N>当年：yy-MM-dd(ex:14-12-30)
         {
             timeString = [str1 substringWithRange:NSMakeRange(2, 8)];
         }
