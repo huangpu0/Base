@@ -59,6 +59,8 @@
 		F6BA8B0B20E1E12500C66C8E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BA8B0120E1DF4000C66C8E /* libstdc++.tbd */; };
 		F6C9098D1FD67C1C00C8F04C /* HttpServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C9098C1FD67C1C00C8F04C /* HttpServer.m */; };
 		F6C909911FD6965300C8F04C /* HttpBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C909901FD6965300C8F04C /* HttpBaseModel.m */; };
+		F6CFC9432137CE610005A79F /* UIButton+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CFC9412137CE600005A79F /* UIButton+Gradient.m */; };
+		F6CFC9442137CE610005A79F /* UIImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CFC9422137CE600005A79F /* UIImage+Gradient.m */; };
 		F6D6A23720AECB520062CA3B /* NetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D6A23620AECB520062CA3B /* NetworkStatus.m */; };
 		F6DA13F220AACF2300B194B9 /* MainRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DA13F020AACF2300B194B9 /* MainRootTabBarController.m */; };
 		F6DA140420AADA7D00B194B9 /* ExploreRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DA140320AADA7D00B194B9 /* ExploreRootViewController.m */; };
@@ -208,6 +210,10 @@
 		F6C9098E1FD67C2B00C8F04C /* HttpServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpServer.h; sourceTree = "<group>"; };
 		F6C9098F1FD6965300C8F04C /* HttpBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpBaseModel.h; sourceTree = "<group>"; };
 		F6C909901FD6965300C8F04C /* HttpBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpBaseModel.m; sourceTree = "<group>"; };
+		F6CFC93F2137CE600005A79F /* UIButton+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Gradient.h"; sourceTree = "<group>"; };
+		F6CFC9402137CE600005A79F /* UIImage+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Gradient.h"; sourceTree = "<group>"; };
+		F6CFC9412137CE600005A79F /* UIButton+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Gradient.m"; sourceTree = "<group>"; };
+		F6CFC9422137CE600005A79F /* UIImage+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Gradient.m"; sourceTree = "<group>"; };
 		F6D6A23420AEAE660062CA3B /* InterfaceParameterList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceParameterList.h; sourceTree = "<group>"; };
 		F6D6A23520AECB480062CA3B /* NetworkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkStatus.h; sourceTree = "<group>"; };
 		F6D6A23620AECB520062CA3B /* NetworkStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkStatus.m; sourceTree = "<group>"; };
@@ -542,6 +548,17 @@
 			path = Third;
 			sourceTree = "<group>";
 		};
+		F6CFC93E2137CE600005A79F /* UIButton+Gradient */ = {
+			isa = PBXGroup;
+			children = (
+				F6CFC93F2137CE600005A79F /* UIButton+Gradient.h */,
+				F6CFC9412137CE600005A79F /* UIButton+Gradient.m */,
+				F6CFC9402137CE600005A79F /* UIImage+Gradient.h */,
+				F6CFC9422137CE600005A79F /* UIImage+Gradient.m */,
+			);
+			path = "UIButton+Gradient";
+			sourceTree = "<group>";
+		};
 		F6DA13EE20AACEA000B194B9 /* MainTabbarRootViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -613,6 +630,7 @@
 		F6E81FFF20C68CF500D1901F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F6CFC93E2137CE600005A79F /* UIButton+Gradient */,
 				F60280F120CE235200E4038B /* PayNumberKeyboard */,
 				F686C61220CBC8AB005BB011 /* JYJKeyBoard */,
 				F67C043720CA20D6009B8452 /* Masonry */,
@@ -986,6 +1004,7 @@
 				F67C045620CA20D6009B8452 /* ViewController+MASAdditions.m in Sources */,
 				F686C61920CBC8AB005BB011 /* BXTextField.m in Sources */,
 				F63428882063B89E00E2B9F5 /* NetworkCache.m in Sources */,
+				F6CFC9442137CE610005A79F /* UIImage+Gradient.m in Sources */,
 				F6DA141020AADBBC00B194B9 /* LoginViewController.m in Sources */,
 				F6407A7A20A575280029516D /* FireworksView.m in Sources */,
 				F6E8205120C68CF600D1901F /* AC_AVPlayerViewController.m in Sources */,
@@ -1024,6 +1043,7 @@
 				F64F4E2520AD30140060AD1A /* NetworkView.m in Sources */,
 				F6E8204920C68CF600D1901F /* UIView+Extension.m in Sources */,
 				F6407AA020A68CCF0029516D /* DiamondView.m in Sources */,
+				F6CFC9432137CE610005A79F /* UIButton+Gradient.m in Sources */,
 				F6E8204020C68CF600D1901F /* YYMemoryCache.m in Sources */,
 				F6E8204520C68CF600D1901F /* ProgressHUD.m in Sources */,
 				F6E8205320C68CF600D1901F /* Keyboard.m in Sources */,
