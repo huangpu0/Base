@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C162262A7D88AE65585C894D /* libPods-BaseDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0D893B7313EE4C7E11A643 /* libPods-BaseDemo.a */; };
+		F600766D21B5279E005460BF /* UIFont+Adapt.m in Sources */ = {isa = PBXBuildFile; fileRef = F600766B21B5279E005460BF /* UIFont+Adapt.m */; };
 		F60280F320CE236A00E4038B /* PayNumbeKeyboard.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F60280F220CE236A00E4038B /* PayNumbeKeyboard.bundle */; };
 		F60280F620CE23F900E4038B /* UITextField+NumberKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = F60280F520CE23F900E4038B /* UITextField+NumberKeyboard.m */; };
 		F60280F920CE250500E4038B /* PayNumberKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F60280F820CE250500E4038B /* PayNumberKeyboardView.m */; };
 		F60280FB20CE252300E4038B /* PayNumberKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F60280FA20CE252300E4038B /* PayNumberKeyboardView.xib */; };
 		F602810320CE72D700E4038B /* LaunchIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F602810120CE72D700E4038B /* LaunchIntroductionView.m */; };
 		F6074F0F20B269000013A6C8 /* SnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6074F0E20B269000013A6C8 /* SnowView.m */; };
+		F63267AA21A7E22000B8BF70 /* YBCustomCameraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63267A821A7E22000B8BF70 /* YBCustomCameraVC.m */; };
 		F63428882063B89E00E2B9F5 /* NetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F63428872063B89E00E2B9F5 /* NetworkCache.m */; };
 		F6407A7A20A575280029516D /* FireworksView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6407A7920A575280029516D /* FireworksView.m */; };
 		F6407A9120A59DD30029516D /* SportsCarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6407A9020A59DD30029516D /* SportsCarView.m */; };
@@ -57,6 +59,7 @@
 		F6BA8B0620E1DF6200C66C8E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BA8B0520E1DF6200C66C8E /* libiconv.tbd */; };
 		F6BA8B0820E1DF6F00C66C8E /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BA8B0720E1DF6F00C66C8E /* libresolv.tbd */; };
 		F6BA8B0B20E1E12500C66C8E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BA8B0120E1DF4000C66C8E /* libstdc++.tbd */; };
+		F6BEB2BA218AD22200FAC86F /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6BEB2B9218AD22200FAC86F /* TestModel.m */; };
 		F6C9098D1FD67C1C00C8F04C /* HttpServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C9098C1FD67C1C00C8F04C /* HttpServer.m */; };
 		F6C909911FD6965300C8F04C /* HttpBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C909901FD6965300C8F04C /* HttpBaseModel.m */; };
 		F6CFC9432137CE610005A79F /* UIButton+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CFC9412137CE600005A79F /* UIButton+Gradient.m */; };
@@ -118,6 +121,8 @@
 		2C0D893B7313EE4C7E11A643 /* libPods-BaseDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7194171351374F7CB458E8 /* Pods-BaseDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseDemo/Pods-BaseDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E6A7F09EF163B01F6B2FD62F /* Pods-BaseDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseDemo/Pods-BaseDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F600766B21B5279E005460BF /* UIFont+Adapt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Adapt.m"; sourceTree = "<group>"; };
+		F600766C21B5279E005460BF /* UIFont+Adapt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Adapt.h"; sourceTree = "<group>"; };
 		F60280F220CE236A00E4038B /* PayNumbeKeyboard.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PayNumbeKeyboard.bundle; sourceTree = "<group>"; };
 		F60280F420CE23F900E4038B /* UITextField+NumberKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+NumberKeyboard.h"; sourceTree = "<group>"; };
 		F60280F520CE23F900E4038B /* UITextField+NumberKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+NumberKeyboard.m"; sourceTree = "<group>"; };
@@ -128,6 +133,8 @@
 		F602810220CE72D700E4038B /* LaunchIntroductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchIntroductionView.h; sourceTree = "<group>"; };
 		F6074F0D20B269000013A6C8 /* SnowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnowView.h; sourceTree = "<group>"; };
 		F6074F0E20B269000013A6C8 /* SnowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnowView.m; sourceTree = "<group>"; };
+		F63267A821A7E22000B8BF70 /* YBCustomCameraVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBCustomCameraVC.m; sourceTree = "<group>"; };
+		F63267A921A7E22000B8BF70 /* YBCustomCameraVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBCustomCameraVC.h; sourceTree = "<group>"; };
 		F63428862063B89300E2B9F5 /* NetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCache.h; sourceTree = "<group>"; };
 		F63428872063B89E00E2B9F5 /* NetworkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCache.m; sourceTree = "<group>"; };
 		F6407A7820A575280029516D /* FireworksView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FireworksView.h; sourceTree = "<group>"; };
@@ -205,6 +212,8 @@
 		F6BA8B0520E1DF6200C66C8E /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		F6BA8B0720E1DF6F00C66C8E /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		F6BA8B0920E1E0EE00C66C8E /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		F6BEB2B8218AD22200FAC86F /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		F6BEB2B9218AD22200FAC86F /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 		F6C909501FD6763100C8F04C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
 		F6C9098C1FD67C1C00C8F04C /* HttpServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpServer.m; sourceTree = "<group>"; };
 		F6C9098E1FD67C2B00C8F04C /* HttpServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpServer.h; sourceTree = "<group>"; };
@@ -348,6 +357,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F600766A21B5279E005460BF /* UIFont+Adapt */ = {
+			isa = PBXGroup;
+			children = (
+				F600766C21B5279E005460BF /* UIFont+Adapt.h */,
+				F600766B21B5279E005460BF /* UIFont+Adapt.m */,
+			);
+			path = "UIFont+Adapt";
+			sourceTree = "<group>";
+		};
 		F6015A2520A55E51004B2CB8 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +410,15 @@
 			path = LaunchIntroduction;
 			sourceTree = "<group>";
 		};
+		F63267A721A7E22000B8BF70 /* CusCamera */ = {
+			isa = PBXGroup;
+			children = (
+				F63267A821A7E22000B8BF70 /* YBCustomCameraVC.m */,
+				F63267A921A7E22000B8BF70 /* YBCustomCameraVC.h */,
+			);
+			path = CusCamera;
+			sourceTree = "<group>";
+		};
 		F67109261FD656C000D2C2C2 = {
 			isa = PBXGroup;
 			children = (
@@ -424,7 +451,7 @@
 				F6BA8AE820E1DDF600C66C8E /* Third */,
 				F6015A2520A55E51004B2CB8 /* Animations */,
 				F6E81FFF20C68CF500D1901F /* Utils */,
-				F67109751FD663B800D2C2C2 /* Network */,
+				F67109751FD663B800D2C2C2 /* NetworkManager */,
 				F671096C1FD660BF00D2C2C2 /* ViewControllers */,
 				F67109381FD656C000D2C2C2 /* Main.storyboard */,
 				F671093B1FD656C000D2C2C2 /* Assets.xcassets */,
@@ -469,7 +496,7 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		F67109751FD663B800D2C2C2 /* Network */ = {
+		F67109751FD663B800D2C2C2 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
 				F6D6A23520AECB480062CA3B /* NetworkStatus.h */,
@@ -478,12 +505,14 @@
 				F64F4E2420AD30140060AD1A /* NetworkView.m */,
 				F6C9098F1FD6965300C8F04C /* HttpBaseModel.h */,
 				F6C909901FD6965300C8F04C /* HttpBaseModel.m */,
+				F6BEB2B8218AD22200FAC86F /* TestModel.h */,
+				F6BEB2B9218AD22200FAC86F /* TestModel.m */,
 				F6C9098E1FD67C2B00C8F04C /* HttpServer.h */,
 				F6C9098C1FD67C1C00C8F04C /* HttpServer.m */,
 				F63428862063B89300E2B9F5 /* NetworkCache.h */,
 				F63428872063B89E00E2B9F5 /* NetworkCache.m */,
 			);
-			path = Network;
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 		F67C043720CA20D6009B8452 /* Masonry */ = {
@@ -630,6 +659,8 @@
 		F6E81FFF20C68CF500D1901F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F600766A21B5279E005460BF /* UIFont+Adapt */,
+				F63267A721A7E22000B8BF70 /* CusCamera */,
 				F6CFC93E2137CE600005A79F /* UIButton+Gradient */,
 				F60280F120CE235200E4038B /* PayNumberKeyboard */,
 				F686C61220CBC8AB005BB011 /* JYJKeyBoard */,
@@ -1023,6 +1054,7 @@
 				F6DA141420AAE5ED00B194B9 /* MainNavigationController.m in Sources */,
 				F6E8204620C68CF600D1901F /* NSString+Extension.m in Sources */,
 				F67C045C20CA20D6009B8452 /* MASConstraint.m in Sources */,
+				F6BEB2BA218AD22200FAC86F /* TestModel.m in Sources */,
 				F6D6A23720AECB520062CA3B /* NetworkStatus.m in Sources */,
 				F67C045820CA20D6009B8452 /* MASConstraintMaker.m in Sources */,
 				F6074F0F20B269000013A6C8 /* SnowView.m in Sources */,
@@ -1054,7 +1086,9 @@
 				F6DA140420AADA7D00B194B9 /* ExploreRootViewController.m in Sources */,
 				F67109421FD656C000D2C2C2 /* main.m in Sources */,
 				F6407A9620A59DE40029516D /* PlaneView.m in Sources */,
+				F600766D21B5279E005460BF /* UIFont+Adapt.m in Sources */,
 				F6E8204220C68CF600D1901F /* MJHeadTool.m in Sources */,
+				F63267AA21A7E22000B8BF70 /* YBCustomCameraVC.m in Sources */,
 				F6E8204820C68CF600D1901F /* Colors.m in Sources */,
 				F6E8204E20C68CF600D1901F /* DateFormat.m in Sources */,
 				F6E8204320C68CF600D1901F /* MJAutoFooterTool.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "HomePageRootViewController.h"
-
+#import "TestModel.h"
 
 @interface HomePageRootViewController ()
 
@@ -18,6 +18,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSArray *dic = @[@{
+                          @"test":@"hhh"
+                          }];
+    NSArray *model = [TestModel modelArrayWithDataArray:dic];
+    TestModel *temModel = model[0];
+    NSLog(@"ttet---%@",temModel.test);
+    
+    NSDictionary *dict = @{
+                          @"appType": @"1",
+                          @"systemType" : @"2"
+       };
+    //?appType=1&systemType=2
+    [HttpServer requestPostMethodWithURL:@"http://192.168.0.198:18080/v1/sys/versionMessage" withParameters:dict withSuccessBlock:^(id response) {
+        NSLog(@"ttt--%@",response[@"msg"]);
+    } withFailureBlock:^(NSError *error) {
+        
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning {

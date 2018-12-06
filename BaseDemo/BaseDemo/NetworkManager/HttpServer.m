@@ -9,9 +9,30 @@
 #import "HttpServer.h"
 #import "NetworkCache.h"
 #import "FilesManager.h"
+
+#define HttpManager [HttpServer sharedClient]
+
 static AFHTTPSessionManager *manager;
 
+
 @implementation HttpServer
+
+////为了防止内存泄露
+//+ (AFHTTPSessionManager *)sharedInstance
+//{
+//    static dispatch_once_t onceToken;
+//
+//    dispatch_once(&onceToken, ^{
+//        manager = [AFHTTPSessionManager manager];
+//        manager.requestSerializer.timeoutInterval = 10;
+//        //发送json数据
+//        manager.requestSerializer = [AFJSONRequestSerializer serializer];
+//        //响应json数据
+//        manager.responseSerializer  = [AFJSONResponseSerializer serializer];
+//        manager.responseSerializer.acceptableContentTypes =[NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", @"text/plain",@"application/atom+xml",@"application/xml",@"text/xml",nil];
+//    });
+//    return manager;
+//}
 
 + (instancetype)sharedClient {
     
@@ -113,7 +134,11 @@ static AFHTTPSessionManager *manager;
     [[HttpServer sharedClient]requestPostMethodWithURL:url withParameters:parameters withSuccessBlock:successBlock withFailureBlock:failureBlock];
 }
 - (void)requestPostMethodWithURL:(NSString *)url withParameters:(id )parameters withSuccessBlock:(HttpRequestSuccess)successBlock withFailureBlock:(HttpRequestFailed)failureBlock;{
-    [manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+    
+    [manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"请求数据-- >> %@",responseObject);
         successBlock(responseObject);
@@ -121,6 +146,7 @@ static AFHTTPSessionManager *manager;
         NSLog(@"请求失败-- >> %@",error);
         failureBlock(error);
     }];
+   
 }
 
 /**

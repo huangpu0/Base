@@ -11,7 +11,7 @@
 
 @implementation NetworkCache
 
-static NSString *const NetworkResponseCache = @"NetworkResponseCache";
+static NSString *const NetworkResponseCache = @"HttpResponseCache";
 static YYCache *_dataCache;
 
 + (void)initialize {

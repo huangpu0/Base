@@ -10,6 +10,9 @@
 
 @interface HttpBaseModel : NSObject
 
--(id)initWithDic:(NSDictionary *)dic;
+-(instancetype)initWithDic:(NSDictionary *)dic;
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key;
+
++ (NSArray *)modelArrayWithDataArray:(NSArray *)array;
+
 @end
